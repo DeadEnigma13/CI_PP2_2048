@@ -74,6 +74,24 @@ document.addEventListener('DOMContentLoaded', () => {
             let filteredColumn = column.filter(num => num)
             let missing = 4 - filteredColumn.length
             let blank = Array(missing).fill(0)
+            let newColumn = blank.concat(filteredColumn)
+            tiles[i].innerHTML = newColumn[0]
+            tiles[i+(width)].innerHTML = newColumn[1]
+            tiles[i+(width*2)].innerHTML = newColumn[2]
+            tiles[i+(width*3)].innerHTML = newColumn[3]
+        }
+    }  
+    // Swipe Up
+    function moveUp() {
+        for (let i = 0; i < 4; i++) {
+            let totalOne = tiles[i].innerHTML
+            let totalTwo = tiles[i+(width)].innerHTML
+            let totalThree = tiles[i+(width*2)].innerHTML
+            let totalFour = tiles[i+(width*3)].innerHTML
+            let column = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
+            let filteredColumn = column.filter(num => num)
+            let missing = 4 - filteredColumn.length
+            let blank = Array(missing).fill(0)
             let newColumn = filteredColumn.concat(blank)
             tiles[i].innerHTML = newColumn[0]
             tiles[i+(width)].innerHTML = newColumn[1]
