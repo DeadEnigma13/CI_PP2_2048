@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tiles[i+1].innerHTML = 0
             }
         }
+        checkForWin()
     }
     function combineColumn() {
         for (let i = 0; i < 12; i++) {
@@ -116,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tiles[i+width].innerHTML = 0
             }
         }
+        checkForWin()
     }
     // Assign Key
     function control(e) {
@@ -154,5 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
         combineColumn()
         moveUp()
         generate
+    }
+    // Check For Number 2048 = Win
+    function checkForWin() {
+        for (let i = 0; i < tiles.length; i++) {
+            if (tiles[i].innerHTML == 2048) {
+                resultDisplay.innerHTML = 'Congratulations, You Win!'
+                document.removeEventListener('keyup', control)
+            }
+        }
     }
 })
