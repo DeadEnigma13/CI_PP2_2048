@@ -12,14 +12,27 @@ h1, h2 {
     align-items: center;
 }
 .grid {
-    display: grid;
-    grid-template-columns: 400px;
-    grid-template-rows: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 450px;
     background-color: gainsboro;
-    gap: 15px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+
 }
 .grid div {
     width: 100px;
     height: 100px;
-    background-color: rgb(169, 105, 243);
+    background-color: #bcc6d3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
 }

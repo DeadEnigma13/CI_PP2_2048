@@ -13,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
             tiles.push(tile)
         }
     }
+    createBoard ()
 })
