@@ -127,13 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Assign Key
     function control(e) {
-        if(e.keyCode === 39) {
+        if(e.key === 'ArrowRight') {
             keyRight()
-        } else if (e.keyCode === 37) {
+        } else if (e.key === 'ArrowLeft') {
            keyLeft() 
-        } else if (e.keyCode === 38) {
+        } else if (e.key === 'ArrowUp') {
             keyUp()
-        } else if (e.keyCode === 40) {
+        } else if (e.key === 'ArrowDown') {
             keyDown()
         }
     }
