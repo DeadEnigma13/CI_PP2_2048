@@ -23,6 +23,7 @@ h1, h2 {
     border-radius: 10px;
     margin: auto;
     padding: 10px;
+    position: relative;
 
 }
 .grid div {
@@ -37,4 +38,12 @@ h1, h2 {
     margin: auto;
     font-size: 20px;
     font-weight: 600;
+    animation: show 200ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+@keyframes show {
+    0% {
+        opacity: .5;
+        transform: scale(0);
+    }
 }
