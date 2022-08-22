@@ -63,4 +63,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+    function combineRow() {
+        for (let i = 0; i < 15; i++) {
+            if (tiles[i].innerHTML === tiles[i+1].innerHTML) {
+                let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+1].innerHTML)
+                tiles[i].innerHTML = combinedTotal
+                tiles[i+1].innerHTML = 0
+            }
+        }
+    }
+    // Assign Key
+    function control(e) {
+        if(e.keyCode === 39) {
+            keyRight()
+        }
+    }
+    document.addEventListener('keyup', control)
+
+    function keyRight() {
+        moveRight()
+        combineRow()
+        moveRight()
+        generate()
+    }
 })
