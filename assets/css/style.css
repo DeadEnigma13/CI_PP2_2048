@@ -11,6 +11,17 @@ h1, h2 {
     justify-content: center;
     align-items: center;
 }
+p {
+    font-size: 18px;
+    color: black;
+    font-style: italic;
+    font-weight: 600;
+}
+p span {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
 .grid {
     display: flex;
     flex-wrap: wrap;
