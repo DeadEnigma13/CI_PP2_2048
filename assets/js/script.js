@@ -107,6 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+1].innerHTML)
                 tiles[i].innerHTML = combinedTotal
                 tiles[i+1].innerHTML = 0
+                score += combinedTotal
+                scoreDisplay.innerHTML = score
             }
         }
         checkForWin()
@@ -117,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+width].innerHTML)
                 tiles[i].innerHTML = combinedTotal
                 tiles[i+width].innerHTML = 0
+                score += combinedTotal
+                scoreDisplay.innerHTML = score
             }
         }
         checkForWin()
