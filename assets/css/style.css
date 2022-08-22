@@ -11,14 +11,15 @@ h1, h2 {
     justify-content: center;
     align-items: center;
 }
-hr {
-    width: 500px;
-    background-color: black;
-}
 .grid {
     display: grid;
     grid-template-columns: 400px;
     grid-template-rows: 400px;
     background-color: gainsboro;
     gap: 15px;
+}
+.grid div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(169, 105, 243);
 }
