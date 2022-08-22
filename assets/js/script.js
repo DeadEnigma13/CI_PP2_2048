@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gridDisplay = document.querySelector('.grid')
-    const scoreDisplay = document.getElementById('score-container')
+    const scoreDisplay = document.getElementById('score')
     const resultDisplay = document.getElementById('result')
     const width = 4
     let tiles = []
+    let score = 0
     // Game Tiles
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let randomNumber = Math.floor(Math.random() * tiles.length)
         if (tiles[randomNumber].innerHTML == 0) {
             tiles[randomNumber].innerHTML = 2
+            checkForGameOver()
         } else generate()
     }
     // Swipe Right
@@ -157,13 +159,26 @@ document.addEventListener('DOMContentLoaded', () => {
         moveUp()
         generate
     }
-    // Check For Number 2048 = Win
+    // Check For Number 2048 For Win
     function checkForWin() {
         for (let i = 0; i < tiles.length; i++) {
             if (tiles[i].innerHTML == 2048) {
                 resultDisplay.innerHTML = 'Congratulations, You Win!'
                 document.removeEventListener('keyup', control)
             }
+        }
+    }
+    // Check For No Possible Moves
+    function checkForGameOver() {
+        let blank = 0
+        for (let i = 0; i < tiles.length; i++) {
+            if (tiles[i].innerHTML == 0) {
+                blank++
+            }
+        }
+        if (blank === 0) {
+            resultDisplay.innerHTML = 'You Lose!'
+            document.removeEventListener('keyup', control)
         }
     }
 })
