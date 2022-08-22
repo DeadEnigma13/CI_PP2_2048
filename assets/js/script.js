@@ -108,6 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+    function combineColumn() {
+        for (let i = 0; i < 12; i++) {
+            if (tiles[i].innerHTML === tiles[i+width].innerHTML) {
+                let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+width].innerHTML)
+                tiles[i].innerHTML = combinedTotal
+                tiles[i+width].innerHTML = 0
+            }
+        }
+    }
     // Assign Key
     function control(e) {
         if(e.keyCode === 39) {
