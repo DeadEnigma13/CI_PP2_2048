@@ -32,16 +32,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 let totalThree = tiles[i+2].innerHTML
                 let totalFour = tiles[i+3].innerHTML
                 let row = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
-                console.log(row)
                 let filteredRow = row.filter(num => num)
-                console.log(filteredRow)
                 let missingTiles = 4 - filteredRow.length
                 let blank = Array(missingTiles).fill(0)
-                console.log(blank)
                 let newRow = blank.concat(filteredRow)
-                console.log(newRow)
+                tiles[i].innerHTML = newRow[0]
+                tiles[i+1].innerHTML = newRow[1]
+                tiles[i+2].innerHTML = newRow[2]
+                tiles[i+3].innerHTML = newRow[3]
            }
         }
     }
-    moveRight()
+    // Swipe Left
+    function moveLeft() {
+        for (let i = 0; i < 16; i++) {
+            if (i % 4 === 0) {
+                let totalOne = tiles[i].innerHTML
+                let totalTwo = tiles[i+1].innerHTML
+                let totalThree = tiles[i+2].innerHTML
+                let totalFour = tiles[i+3].innerHTML
+                let row = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
+                let filteredRow = row.filter(num => num)
+                let missingTiles = 4 - filteredRow.length
+                let blank = Array(missingTiles).fill(0)
+                let newRow = filteredRow.concat(blank)
+                tiles[i].innerHTML = newRow[0]
+                tiles[i+1].innerHTML = newRow[1]
+                tiles[i+2].innerHTML = newRow[2]
+                tiles[i+3].innerHTML = newRow[3]
+            }
+        }
+    }
 })
