@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
             gridDisplay.appendChild(tile)
             tiles.push(tile)
         }
+        generate()
+        generate()
     }
     createBoard ()
+    // Generate Random Number
+    function generate() {
+        let randomNumber = Math.floor(Math.random() * tiles.length)
+        if (tiles[randomNumber].innerHTML == 0) {
+            tiles[randomNumber].innerHTML = 2
+        } else generate()
+    }
 })
