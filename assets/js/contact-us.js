@@ -14,19 +14,21 @@ $(document).ready(function () {
 // Sends an email to site owner through emailJS if the submit is fired.
 // Script taken from the official EmailJS tutorial https://www.emailjs.com/docs/tutorial/creating-contact-form/ 
 // and Email Templates Playground environment.
-const sendFormButton = document.getElementById("btn-send-form");
+const btn = document.getElementById("btn-send-form");
 
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
-    emailjs.init("user_K1Z-TJmXTj-7CyJwZ");
-    sendFormButton.value = "Sending..."; //changing value of the button when sending in progress
+    btn.value = 'Sending...';
+    
+    const serviceID = 'service_bvxfb89';
+    const templateID = 'template_78924mr';
 
-    emailjs.sendForm("service_bvxfb89", "contact-form", this)
-        .then(() => {
-            sendFormButton.value = "Send";
-            formSubmittedMessage();
-
-        }, (err) => {
-            console.log(JSON.stringify(err));
-        });
-});
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+    }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+    });
+})
