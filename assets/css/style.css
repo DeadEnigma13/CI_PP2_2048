@@ -22,6 +22,16 @@ p span {
     color: white;
     font-weight: bold;
 }
+button {
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+    margin-right: 8px;
+    padding: 1px;
+    font-size: 25px;
+    background-color: rgb(121, 103, 91);
+    border-style: none;
+}
 /** Grid **/
 .grid {
     display: flex;

@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 4
     let tiles = []
     let score = 0
-    let highscore = 0
     // Game Tiles
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
@@ -138,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             keyUp()
         } else if (e.key === 'ArrowDown') {
             keyDown()
-        }
+        } 
     }
     // Assign Keys for swiping mobile use
     document.addEventListener('touchstart', function (event) {
