@@ -22,6 +22,7 @@ p span {
     color: white;
     font-weight: bold;
 }
+/** Grid **/
 .grid {
     display: flex;
     flex-wrap: wrap;
