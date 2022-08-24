@@ -1,15 +1,33 @@
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        sendFormButton.value = "Sending..."; //changing value of the button when sending in progress
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm('contact_service', 'contact_form', this)
-            .then(function() {
-                console.log('SUCCESS!');
-            }, function(error) {
-                console.log('FAILED...', error);
-            });
-    });
-}
+// Prevent contact form container going off the mobile screen when clicking on input field & keyboard being shown on screen
+$(document).ready(function () {
+    if ($(window).width() <= 740) { // common horizontal viewport dimension of mobile screens
+        document.getElementsByTagName("input")[0].addEventListener("focus", function () {
+            document.getElementById("grid").style.top = "75%";
+        });
+        document.getElementsByTagName("input")[0].addEventListener("blur", function () { // container returns to its default position when input not focused
+            document.getElementById("grid").style.top = "45%";
+        });
+    }
+});
+
+// Add an eventListener to listen for the submit.
+// Sends an email to site owner through emailJS if the submit is fired.
+// Script taken from the official EmailJS tutorial https://www.emailjs.com/docs/tutorial/creating-contact-form/ 
+// and Email Templates Playground environment.
+
+const sendFormButton = document.getElementById("btn-send-form");
+
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    emailjs.init("K1Z-TJmXTj-7CyJwZ");
+    sendFormButton.value = "Sending..."; // changing value of the button when sending in progress
+
+    emailjs.sendForm("2048", "contact-form", this)
+        .then(() => {
+            sendFormButton.value = "Send";
+            formSubmittedMessage();
+
+        }, (err) => {
+            console.log(JSON.stringify(err));
+        });
+});
