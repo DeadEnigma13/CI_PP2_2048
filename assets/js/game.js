@@ -151,21 +151,37 @@ document.addEventListener('DOMContentLoaded', () => {
         handleGesture();
     }, false);
     
-    
+    // Swipe Gestures for left, right, up & down
     function handleGesture() {
         if (touchendX < touchstartX) {
+            moveLeft()
+            combineRow()
+            moveLeft()
+            generate()
             console.log('Swiped Left');
         }
     
         if (touchendX > touchstartX) {
+            moveRight()
+            combineRow()
+            moveRight()
+            generate()
             console.log('Swiped Right');
         }
     
         if (touchendY < touchstartY) {
+            moveUp()
+            combineColumn()
+            moveUp()
+            generate()
             console.log('Swiped Up');
         }
     
         if (touchendY > touchstartY) {
+            moveDown()
+            combineColumn()
+            moveDown()
+            generate()
             console.log('Swiped Down');
         }
     
@@ -190,14 +206,14 @@ document.addEventListener('DOMContentLoaded', () => {
         moveDown()
         combineColumn()
         moveDown()
-        generate
+        generate()
     }
     // Move Up Function
     function keyUp() {
         moveUp()
         combineColumn()
         moveUp()
-        generate
+        generate()
     }
     // Check For Number 2048 For Win
     function checkForWin() {
