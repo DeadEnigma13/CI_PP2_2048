@@ -168,15 +168,36 @@ document.addEventListener('DOMContentLoaded', () => {
         moveUp()
         generate
     }
+    const grid = getElementById("grid")
+    grid.addEventListener("touchstart", e => {
+        e.preventDefault()
+        console.log("Touches", e.touches.length)
+        console.log("Target", e.targetTouches.length)
+        console.log("Changed", e.targetChanged.length)
+    })
     // Swipe Function for mobile and tablet devices
     document.addEventListener("touchstart", e => {
-        console.log("Start")
+        [...e.changedTouches].forEach(touch => {
+            const dot = document.createElement("div")
+            dot.classList.add("dot")
+            dot.style.top = `${touch.pageY}px`
+            dot.style.left = `${touch.pageX}px`
+            dot.id = touch.identifier
+            document.body.append(dot)
+        })
     })
     document.addEventListener("touchmove", e => {
-        console.log("Move")
+        [...e.changedTouches].forEach(touch => {
+            const dot = document.getElementById(touch.identifier)
+            dot.style.top = `${touch.pageY}px`
+            dot.style.left = `${touch.pageX}px`
+        })
     })
     document.addEventListener("touchend", e => {
-        console.log("End")
+        [...e.changedTouches].forEach(touch => {
+            const dot = document.getElementById(touch.identifier)
+            dot.remove()
+        })
     })
     // Check For Number 2048 For Win
     function checkForWin() {
