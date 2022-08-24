@@ -3,13 +3,29 @@
 body {
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    background-color: rgb(121, 103, 91);
+    background-color: rgba(151, 149, 147);
+}
+.score-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.score-container h2 {
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(250, 114, 114, 0.5);
+}
+.score-container h1 {
+    border-radius: 10px;
+    background-color: rgb(252,185,134, 0.5);
 }
 h1, h2 {
-    font-size: 35px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    border: 2px solid #101010;
+    background-color: white;
 }
 p {
     font-size: 18px;
@@ -29,7 +45,7 @@ button {
     margin-right: 8px;
     padding: 1px;
     font-size: 25px;
-    background-color: rgb(121, 103, 91);
+    background-color: rgb(151, 149, 147, 0.75);
     border-style: none;
 }
 /** Grid **/
