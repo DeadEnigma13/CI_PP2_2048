@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 4
     let tiles = []
     let score = 0
+    let highscore = 0
     // Game Tiles
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Swipe Gestures for left, right, up & down
     function handleGesture() {
+        // Swipe Left function
         if (touchendX < touchstartX) {
             moveLeft()
             combineRow()
@@ -160,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generate()
             console.log('Swiped Left');
         }
-    
+        // Swipe Right function
         if (touchendX > touchstartX) {
             moveRight()
             combineRow()
@@ -168,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generate()
             console.log('Swiped Right');
         }
-    
+        // Swipe Up function
         if (touchendY < touchstartY) {
             moveUp()
             combineColumn()
@@ -176,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generate()
             console.log('Swiped Up');
         }
-    
+        // Swipe Down function
         if (touchendY > touchstartY) {
             moveDown()
             combineColumn()
