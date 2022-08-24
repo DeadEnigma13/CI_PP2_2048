@@ -16,11 +16,11 @@ $(document).ready(function () {
 // and Email Templates Playground environment.
 const btn = document.getElementById("btn-send-form");
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
     btn.value = 'Sending...';
     
-    const serviceID = 'service_bvxfb89';
+    const serviceID = 'default_service';
     const templateID = 'template_78924mr';
 
     emailjs.sendForm(serviceID, templateID, this)
