@@ -8,8 +8,14 @@
     <!-- JavaScript -->
     <script src="assets/js/game.js"></script>
     <script src="assets/js/leaderboard.js"></script>
+    <script src="assets/js/contact-us.js"></script>
     <!-- ContactJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('K1Z-TJmXTj-7CyJwZ');
+        })();
+    </script>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -28,8 +34,8 @@
         <input type="email" name="user_email" placeholder="Your Email">
         <label>Message</label>
         <textarea class="form-control" id="message" rows="5" name="message" placeholder="Leave us your feedback or share any suggestion how we can further improve the game." required></textarea>
-        <input type="submit" id="btn-send-form" class="button btn-send-form my-3" value="Send">
-        <a href="index.html" class="button my-3">Go back</a>
+        <input type="submit" id="btn-send-form" class="button btn-send-form" value="Send">
+        <a href="index.html" class="button">Go back</a>
     </form>
     </div>
     <!-- Footer -->
