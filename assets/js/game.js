@@ -100,7 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tiles[i+(width*2)].innerHTML = newColumn[2]
             tiles[i+(width*3)].innerHTML = newColumn[3]
         }
-    }  
+    }
+    // Combine Numbers along row if numbers match
     function combineRow() {
         for (let i = 0; i < 15; i++) {
             if (tiles[i].innerHTML === tiles[i+1].innerHTML) {
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         checkForWin()
     }
+    // Combine Numbers along column if numbers match
     function combineColumn() {
         for (let i = 0; i < 12; i++) {
             if (tiles[i].innerHTML === tiles[i+width].innerHTML) {
@@ -138,31 +140,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     document.addEventListener('keyup', control)
-
+    // Move Right Function
     function keyRight() {
         moveRight()
         combineRow()
         moveRight()
         generate()
     }
+    // Move Left Function
     function keyLeft() {
         moveLeft()
         combineRow()
         moveLeft()
         generate()
     }
+    // Move Down Function
     function keyDown() {
         moveDown()
         combineColumn()
         moveDown()
         generate
     }
+    // Move Up Function
     function keyUp() {
         moveUp()
         combineColumn()
         moveUp()
         generate
     }
+    // Swipe Function for mobile and tablet devices
+    document.addEventListener("touchstart", e => {
+        console.log("Start")
+    })
+    document.addEventListener("touchmove", e => {
+        console.log("Move")
+    })
+    document.addEventListener("touchend", e => {
+        console.log("End")
+    })
     // Check For Number 2048 For Win
     function checkForWin() {
         for (let i = 0; i < tiles.length; i++) {
