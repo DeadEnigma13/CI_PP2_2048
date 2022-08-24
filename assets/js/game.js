@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const grid = getElementById("grid")
     grid.addEventListener("touchstart", e => {
+        // Cancels zoom and swipe down refresh on page loaded up
         e.preventDefault()
         console.log("Touches", e.touches.length)
         console.log("Target", e.targetTouches.length)
@@ -195,6 +196,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     document.addEventListener("touchend", e => {
         [...e.changedTouches].forEach(touch => {
+            const dot = document.getElementById(touch.identifier)
+            dot.remove()
+        })
+    })
+    // Cancel touch if notification or bad touch connection
+    document.addEventListener("touchcancel", e => {
+        ;[...e.changedTouches].forEach(touch => {
             const dot = document.getElementById(touch.identifier)
             dot.remove()
         })
