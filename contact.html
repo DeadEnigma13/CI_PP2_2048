@@ -7,29 +7,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- JavaScript -->
     <script src="assets/js/game.js"></script>
+    <script src="assets/js/leaderboard.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <title>2048</title>
 </head>
 <body>
-    <div class="score-container">
-    <h1>2048</h1>
-    <hr>
-    <div class="score-title">
-    <h2>Score: <span id="score">0</span></h2>
-    <p>Connect numbers together until <span>2048</span> tile is visible!</p>
-    <button type="button" onClick="window.location.reload();"><i class="fa-solid fa-arrows-rotate"></i></button>
-    </div>
-    </div>
-    <div id="result">
-
-    </div>
-    <div class="grid">
-
-    </div>
-    <div id="leaderboard" class="container">
-    
-    </div>
+    <!-- Contact Form -->
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+    <!-- Footer -->
     <footer>
         <div class="float=left">
             <p>© Created by Zack Owen</p>
