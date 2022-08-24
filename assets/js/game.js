@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         checkForWin()
     }
-    // Assign Key
+    // Assign Keys for keyboard use
     function control(e) {
         if(e.key === 'ArrowRight') {
             keyRight()
@@ -138,6 +138,37 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (e.key === 'ArrowDown') {
             keyDown()
         }
+    }
+    // Assign Keys for swiping mobile use
+    document.addEventListener('touchstart', function (event) {
+        touchstartX = event.changedTouches[0].screenX;
+        touchstartY = event.changedTouches[0].screenY;
+    }, false);
+    
+    document.addEventListener('touchend', function (event) {
+        touchendX = event.changedTouches[0].screenX;
+        touchendY = event.changedTouches[0].screenY;
+        handleGesture();
+    }, false);
+    
+    
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            console.log('Swiped Left');
+        }
+    
+        if (touchendX > touchstartX) {
+            console.log('Swiped Right');
+        }
+    
+        if (touchendY < touchstartY) {
+            console.log('Swiped Up');
+        }
+    
+        if (touchendY > touchstartY) {
+            console.log('Swiped Down');
+        }
+    
     }
     document.addEventListener('keyup', control)
     // Move Right Function
@@ -168,45 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
         moveUp()
         generate
     }
-    const grid = getElementById("grid")
-    grid.addEventListener("touchstart", e => {
-        // Cancels zoom and swipe down refresh on page loaded up
-        e.preventDefault()
-        console.log("Touches", e.touches.length)
-        console.log("Target", e.targetTouches.length)
-        console.log("Changed", e.targetChanged.length)
-    })
-    // Swipe Function for mobile and tablet devices
-    document.addEventListener("touchstart", e => {
-        [...e.changedTouches].forEach(touch => {
-            const dot = document.createElement("div")
-            dot.classList.add("dot")
-            dot.style.top = `${touch.pageY}px`
-            dot.style.left = `${touch.pageX}px`
-            dot.id = touch.identifier
-            document.body.append(dot)
-        })
-    })
-    document.addEventListener("touchmove", e => {
-        [...e.changedTouches].forEach(touch => {
-            const dot = document.getElementById(touch.identifier)
-            dot.style.top = `${touch.pageY}px`
-            dot.style.left = `${touch.pageX}px`
-        })
-    })
-    document.addEventListener("touchend", e => {
-        [...e.changedTouches].forEach(touch => {
-            const dot = document.getElementById(touch.identifier)
-            dot.remove()
-        })
-    })
-    // Cancel touch if notification or bad touch connection
-    document.addEventListener("touchcancel", e => {
-        ;[...e.changedTouches].forEach(touch => {
-            const dot = document.getElementById(touch.identifier)
-            dot.remove()
-        })
-    })
     // Check For Number 2048 For Win
     function checkForWin() {
         for (let i = 0; i < tiles.length; i++) {
