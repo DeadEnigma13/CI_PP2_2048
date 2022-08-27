@@ -91,6 +91,10 @@ hr {
     animation: show 200ms ease-in-out;
     transition: 100ms ease-in-out;
 }
+#result {
+    font-size: 25px;
+    font-weight: bold;
+}
 /** Form **/
 #form-container {
     padding: 5%;
