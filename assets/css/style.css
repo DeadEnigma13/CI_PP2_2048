@@ -8,6 +8,14 @@ body {
 .score-container {
     display: flex;
     flex-direction: row-reverse;
+    padding-bottom: 25px;
+}
+.score-container button {
+    margin: auto;
+    padding: 0px 5px;
+}
+.score-container button:hover {
+    color: white;
 }
 .score-container h2 {
     margin: auto;
@@ -26,6 +34,7 @@ h1, h2 {
     box-sizing: border-box;
     border: 2px solid #101010;
     background-color: white;
+    padding: 3px;
 }
 p {
     font-size: 18px;
@@ -47,6 +56,9 @@ button {
     font-size: 25px;
     background-color: rgb(151, 149, 147, 0.75);
     border-style: none;
+}
+hr {
+    display: none;
 }
 /** Grid **/
 .grid {
@@ -78,6 +90,26 @@ button {
     font-weight: 600;
     animation: show 200ms ease-in-out;
     transition: 100ms ease-in-out;
+}
+/** Footer **/
+#footer-container .float-left {
+    display: flex;
+    float: left;
+    padding: 3px;
+}
+#footer-container .float-right {
+    display: flex;
+    float: right;
+    margin: auto;
+    padding: 20px;
+}
+#footer-container i {
+    font-size: 27px;
+    color: white;
+    padding: 3px;
+}
+#footer-container i:hover {
+    color: rgb(250, 114, 114);
 }
 @keyframes show {
     0% {
