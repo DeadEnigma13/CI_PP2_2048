@@ -91,6 +91,11 @@ hr {
     animation: show 200ms ease-in-out;
     transition: 100ms ease-in-out;
 }
+/** Form **/
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
 /** Footer **/
 #footer-container .float-left {
     display: flex;
