@@ -92,6 +92,15 @@ hr {
     transition: 100ms ease-in-out;
 }
 /** Form **/
+#form-container {
+    padding: 5%;
+    margin-top: 25%;
+    margin-left: 3%;
+    margin-right: 3%;
+    box-sizing: border-box;
+    border: 5px solid #101010;
+    background-color: powderblue;
+}
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -116,8 +125,26 @@ hr {
     color: #101010;
     background-color: #bcc6d3;
     cursor: pointer;
+    width: 25%;
+    margin-top: 5px;
 }
 #contact-form .btn-send-form:hover {
+    color: white;
+    background-color: #101010;
+}
+#contact-form a {
+    text-decoration: none;
+    color: #101010;
+    border: 2px solid #101010;
+    background-color: #bcc6d3;
+    width: 24%;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+#contact-form a:hover {
     color: white;
     background-color: #101010;
 }
