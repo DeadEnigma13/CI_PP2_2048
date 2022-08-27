@@ -104,6 +104,7 @@ hr {
     box-sizing: border-box;
     border: 5px solid #101010;
     background-color: powderblue;
+    border-radius: 10px;
 }
 #contact-form {
     display: flex;
@@ -147,6 +148,8 @@ hr {
     font-weight: bold;
     text-align: center;
     margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
 #contact-form a:hover {
     color: white;
@@ -160,6 +163,8 @@ hr {
     top: 95%;
     left: 50%;
     transform: translate(-50%, -45%);
+    display: flex;
+    align-items: center;
 }
 #footer-container .float-left {
     display: flex;
