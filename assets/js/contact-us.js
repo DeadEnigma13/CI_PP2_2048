@@ -1,10 +1,10 @@
 // Prevent contact form container going off the mobile screen when clicking on input field & keyboard being shown on screen
 $(document).ready(function () {
-    if ($(window).width() <= 740) { // common horizontal viewport dimension of mobile screens
+    if ($(window).width() <= 740) { // Common horizontal viewport dimension of mobile screens
         document.getElementsByTagName("input")[0].addEventListener("focus", function () {
             document.getElementById("grid").style.top = "75%";
         });
-        document.getElementsByTagName("input")[0].addEventListener("blur", function () { // container returns to its default position when input not focused
+        document.getElementsByTagName("input")[0].addEventListener("blur", function () { // Container returns to its default position when input not focused
             document.getElementById("grid").style.top = "45%";
         });
     }
@@ -14,21 +14,24 @@ $(document).ready(function () {
 // Sends an email to site owner through emailJS if the submit is fired.
 // Script taken from the official EmailJS tutorial https://www.emailjs.com/docs/tutorial/creating-contact-form/ 
 // and Email Templates Playground environment.
-const btn = document.getElementById("btn-send-form");
+const sendFormButton = document.getElementById("btn-send-form");
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
-    btn.value = 'Sending...';
-    
-    const serviceID = 'default_service';
-    const templateID = 'template_78924mr';
+    emailjs.init("K1Z-TJmXTj-7CyJwZ");
+    sendFormButton.value = "Sending..."; //changing value of the button when sending in progress
 
-    emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-    }, (err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
-    });
-})
+    emailjs.sendForm("2048", "contact-form", this)
+        .then(() => {
+            sendFormButton.value = "Send";
+            formSubmitted();
+        }, (err) => {
+            console.log(JSON.stringify(err));
+        });
+});
+
+function formSubmitted() {
+    let message = `
+    Thank you for submitting, your message has been sent`;
+    document.getElementsByClassName('score-container').innerHTML = message;
+}

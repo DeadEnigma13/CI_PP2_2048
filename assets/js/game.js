@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tiles[i+1].innerHTML = 0
                 score += combinedTotal
                 scoreDisplay.innerHTML = score
-            }
+            }  
         }
         checkForWin()
     }
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tiles[i+width].innerHTML = 0
                 score += combinedTotal
                 scoreDisplay.innerHTML = score
-            }
+            } 
         }
         checkForWin()
     }
