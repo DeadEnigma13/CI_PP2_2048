@@ -96,7 +96,40 @@ hr {
     display: flex;
     flex-direction: column;
 }
+#contact-form input {
+    border-radius: 5px;
+    border: 2px solid #101010;
+    font-size: 15px;
+} 
+#contact-form textarea {
+    border-radius: 5px;
+    border: 2px solid #101010;
+    font-size: 15px;
+}
+#contact-form label {
+    font-size: 25px;
+    color: #101010;
+    font-weight: bold;
+}
+#contact-form .btn-send-form {
+    font-size: 20px;
+    color: #101010;
+    background-color: #bcc6d3;
+    cursor: pointer;
+}
+#contact-form .btn-send-form:hover {
+    color: white;
+    background-color: #101010;
+}
 /** Footer **/
+#footer-container {
+    position: fixed;
+    width: 80%;
+    max-width: 50rem;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
 #footer-container .float-left {
     display: flex;
     float: left;
