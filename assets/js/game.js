@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridDisplay = document.querySelector('.grid');
     const scoreDisplay = document.getElementById('score');
     const resultDisplay = document.getElementById('result');
-    const width = 4
+    const width = 4;
     let tiles = [];
-    let score = 0
+    let score = 0;
     // Game Tiles
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         generate();
         generate();
     }
-    createBoard ()
+    createBoard ();
     // Generate Random Number
     function generate() {
         let randomNumber = Math.floor(Math.random() * tiles.length);
@@ -173,22 +173,22 @@ document.addEventListener('DOMContentLoaded', () => {
         var hori = touchstartX - touchendX;
         var vert = touchstartY - touchendY;
         var dir = String;
+        console.log(Math.abs(hori) + " / " + Math.abs(vert)); // REMOVE
         if (Math.abs(vert) > Math.abs(hori)) {
             if (vert < 0) {
-                dir = "down";
+                dir = "down"
             } else {
-                dir = "up";
+                dir = "up"
             }
         } else {
             if (hori < 0) {
-                dir = "right";
+                dir = "right"
             } else {
-                dir = "left";
+                dir = "left"
             }
         }
         handleGesture(dir);
     }, false);
-    
     // Swipe Gestures for left, right, up & down
     function handleGesture(dir) {
         switch(dir) {
@@ -241,25 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
             generate();
             console.log('Swiped Down');
         }
-    
-    }
-    if ((Math.abs(vert) > 200) || (Math.abs(hori) > 200)) {
-        if (Math.abs(vert) > Math.abs(hori)) {
-            if (vert < 0) {
-                dir = "down";
-            } else {
-                dir = "up";
-            }
-        } else {
-            if (hori < 0) {
-                dir = "right";
-            } else {
-                dir = "left";
-            }
-        }
-        handleGesture(dir);
-    } else {
-        console.log("Swipe not big enough"); // REMOVE THIS ELSE SECTION LATER
     }
     document.addEventListener('keyup', control);
     // Move Right Function
