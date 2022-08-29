@@ -1,51 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const gridDisplay = document.querySelector('.grid')
-    const scoreDisplay = document.getElementById('score')
-    const resultDisplay = document.getElementById('result')
+    const gridDisplay = document.querySelector('.grid');
+    const scoreDisplay = document.getElementById('score');
+    const resultDisplay = document.getElementById('result');
     const width = 4
-    let tiles = []
+    let tiles = [];
     let score = 0
     // Game Tiles
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
-            tile = document.createElement('div')
-            tile.innerHTML = 0
-            gridDisplay.appendChild(tile)
-            tiles.push(tile)
+            tile = document.createElement('div');
+            tile.innerHTML = 0;
+            gridDisplay.appendChild(tile);
+            tiles.push(tile);
         }
-        generate()
-        generate()
+        generate();
+        generate();
     }
     createBoard ()
     // Generate Random Number
     function generate() {
-        let randomNumber = Math.floor(Math.random() * tiles.length)
+        let randomNumber = Math.floor(Math.random() * tiles.length);
         if (tiles[randomNumber].innerHTML == 0) {
-            tiles[randomNumber].innerHTML = 2
-            checkForGameOver()
-        } else generate()
+            tiles[randomNumber].innerHTML = 2;
+            checkForGameOver();
+        } else generate();
     }
     // Swipe Right
     function moveRight(validMove) {
         validMove = validMove;
         for (let i = 0; i < 16; i++) {
            if (i % 4 === 0) {
-                let totalOne = tiles[i].innerHTML
-                let totalTwo = tiles[i+1].innerHTML
-                let totalThree = tiles[i+2].innerHTML
-                let totalFour = tiles[i+3].innerHTML
-                let row = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
-                let filteredRow = row.filter(num => num)
-                let missingTiles = 4 - filteredRow.length
-                let blank = Array(missingTiles).fill(0)
-                let newRow = blank.concat(filteredRow)
+                let totalOne = tiles[i].innerHTML;
+                let totalTwo = tiles[i+1].innerHTML;
+                let totalThree = tiles[i+2].innerHTML;
+                let totalFour = tiles[i+3].innerHTML;
+                let row = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)];
+                let filteredRow = row.filter(num => num);
+                let missingTiles = 4 - filteredRow.length;
+                let blank = Array(missingTiles).fill(0);
+                let newRow = blank.concat(filteredRow);
                 if (!(JSON.stringify(newRow) == JSON.stringify(row))) { 
                     validMove = true;
                 }
-                tiles[i].innerHTML = newRow[0]
-                tiles[i+1].innerHTML = newRow[1]
-                tiles[i+2].innerHTML = newRow[2]
-                tiles[i+3].innerHTML = newRow[3]
+                tiles[i].innerHTML = newRow[0];
+                tiles[i+1].innerHTML = newRow[1];
+                tiles[i+2].innerHTML = newRow[2];
+                tiles[i+3].innerHTML = newRow[3];
            }
         }
         return validMove; // Make sure we return if a valid move has happened or not
@@ -55,22 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
         validMove = validMove;
         for (let i = 0; i < 16; i++) {
             if (i % 4 === 0) {
-                let totalOne = tiles[i].innerHTML
-                let totalTwo = tiles[i+1].innerHTML
-                let totalThree = tiles[i+2].innerHTML
-                let totalFour = tiles[i+3].innerHTML
-                let row = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
-                let filteredRow = row.filter(num => num)
-                let missingTiles = 4 - filteredRow.length
-                let blank = Array(missingTiles).fill(0)
-                let newRow = filteredRow.concat(blank)
+                let totalOne = tiles[i].innerHTML;
+                let totalTwo = tiles[i+1].innerHTML;
+                let totalThree = tiles[i+2].innerHTML;
+                let totalFour = tiles[i+3].innerHTML;
+                let row = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)];
+                let filteredRow = row.filter(num => num);
+                let missingTiles = 4 - filteredRow.length;
+                let blank = Array(missingTiles).fill(0);
+                let newRow = filteredRow.concat(blank);
                 if (!(JSON.stringify(newRow) == JSON.stringify(row))) { 
                     validMove = true;
                 }
-                tiles[i].innerHTML = newRow[0]
-                tiles[i+1].innerHTML = newRow[1]
-                tiles[i+2].innerHTML = newRow[2]
-                tiles[i+3].innerHTML = newRow[3]
+                tiles[i].innerHTML = newRow[0];
+                tiles[i+1].innerHTML = newRow[1];
+                tiles[i+2].innerHTML = newRow[2];
+                tiles[i+3].innerHTML = newRow[3];
             }
         }
         return validMove; // Make sure we return if a valid move has happened or not
@@ -79,22 +79,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function moveDown(validMove) {
         validMove = validMove;
         for (let i = 0; i < 4; i++) {
-            let totalOne = tiles[i].innerHTML
-            let totalTwo = tiles[i+(width)].innerHTML
-            let totalThree = tiles[i+(width*2)].innerHTML
-            let totalFour = tiles[i+(width*3)].innerHTML
-            let column = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
-            let filteredColumn = column.filter(num => num)
-            let missing = 4 - filteredColumn.length
-            let blank = Array(missing).fill(0)
-            let newColumn = blank.concat(filteredColumn)
+            let totalOne = tiles[i].innerHTML;
+            let totalTwo = tiles[i+(width)].innerHTML;
+            let totalThree = tiles[i+(width*2)].innerHTML;
+            let totalFour = tiles[i+(width*3)].innerHTML;
+            let column = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)];
+            let filteredColumn = column.filter(num => num);
+            let missing = 4 - filteredColumn.length;
+            let blank = Array(missing).fill(0);
+            let newColumn = blank.concat(filteredColumn);
             if (!(JSON.stringify(newColumn) == JSON.stringify(column))) { 
                 validMove = true;
             }
-            tiles[i].innerHTML = newColumn[0]
-            tiles[i+(width)].innerHTML = newColumn[1]
-            tiles[i+(width*2)].innerHTML = newColumn[2]
-            tiles[i+(width*3)].innerHTML = newColumn[3]
+            tiles[i].innerHTML = newColumn[0];
+            tiles[i+(width)].innerHTML = newColumn[1];
+            tiles[i+(width*2)].innerHTML = newColumn[2];
+            tiles[i+(width*3)].innerHTML = newColumn[3];
         }
         return validMove; // Make sure we return if a valid move has happened or not
     }  
@@ -102,22 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function moveUp(validMove) {
         validMove = validMove;
         for (let i = 0; i < 4; i++) {
-            let totalOne = tiles[i].innerHTML
-            let totalTwo = tiles[i+(width)].innerHTML
-            let totalThree = tiles[i+(width*2)].innerHTML
-            let totalFour = tiles[i+(width*3)].innerHTML
-            let column = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)]
-            let filteredColumn = column.filter(num => num)
-            let missing = 4 - filteredColumn.length
-            let blank = Array(missing).fill(0)
-            let newColumn = filteredColumn.concat(blank)
+            let totalOne = tiles[i].innerHTML;
+            let totalTwo = tiles[i+(width)].innerHTML;
+            let totalThree = tiles[i+(width*2)].innerHTML;
+            let totalFour = tiles[i+(width*3)].innerHTML;
+            let column = [parseInt(totalOne), parseInt(totalTwo), parseInt(totalThree), parseInt(totalFour)];
+            let filteredColumn = column.filter(num => num);
+            let missing = 4 - filteredColumn.length;
+            let blank = Array(missing).fill(0);
+            let newColumn = filteredColumn.concat(blank);
             if (!(JSON.stringify(newColumn) == JSON.stringify(column))) { 
                 validMove = true;
             }
-            tiles[i].innerHTML = newColumn[0]
-            tiles[i+(width)].innerHTML = newColumn[1]
-            tiles[i+(width*2)].innerHTML = newColumn[2]
-            tiles[i+(width*3)].innerHTML = newColumn[3]
+            tiles[i].innerHTML = newColumn[0];
+            tiles[i+(width)].innerHTML = newColumn[1];
+            tiles[i+(width*2)].innerHTML = newColumn[2];
+            tiles[i+(width*3)].innerHTML = newColumn[3];
         }
         return validMove; // Make sure we return if a valid move has happened or not
     }
@@ -125,40 +125,40 @@ document.addEventListener('DOMContentLoaded', () => {
     function combineRow(validMove) {
         for (let i = 0; i < 15; i++) {
             if (tiles[i].innerHTML === tiles[i+1].innerHTML) {
-                let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+1].innerHTML)
-                tiles[i].innerHTML = combinedTotal
-                tiles[i+1].innerHTML = 0
-                score += combinedTotal
-                scoreDisplay.innerHTML = score
+                let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+1].innerHTML);
+                tiles[i].innerHTML = combinedTotal;
+                tiles[i+1].innerHTML = 0;
+                score += combinedTotal;
+                scoreDisplay.innerHTML = score;
             }  
         }
-        checkForWin()
+        checkForWin();
         return validMove;
     }
     // Combine Numbers along column if numbers match
     function combineColumn(validMove) {
         for (let i = 0; i < 12; i++) {
             if (tiles[i].innerHTML === tiles[i+width].innerHTML) {
-                let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+width].innerHTML)
-                tiles[i].innerHTML = combinedTotal
-                tiles[i+width].innerHTML = 0
-                score += combinedTotal
-                scoreDisplay.innerHTML = score
+                let combinedTotal = parseInt(tiles[i].innerHTML) + parseInt(tiles[i+width].innerHTML);
+                tiles[i].innerHTML = combinedTotal;
+                tiles[i+width].innerHTML = 0;
+                score += combinedTotal;
+                scoreDisplay.innerHTML = score;
             } 
         }
-        checkForWin()
+        checkForWin();
         return validMove;
     }
     // Assign Keys for keyboard use
     function control(e) {
         if(e.key === 'ArrowRight') {
-            keyRight()
+            keyRight();
         } else if (e.key === 'ArrowLeft') {
-           keyLeft() 
+           keyLeft() ;
         } else if (e.key === 'ArrowUp') {
-            keyUp()
+            keyUp();
         } else if (e.key === 'ArrowDown') {
-            keyDown()
+            keyDown();
         } 
     }
     // Assign Keys for swiping mobile use
@@ -173,18 +173,17 @@ document.addEventListener('DOMContentLoaded', () => {
         var hori = touchstartX - touchendX;
         var vert = touchstartY - touchendY;
         var dir = String;
-        console.log(Math.abs(hori) + " / " + Math.abs(vert)); // REMOVE
         if (Math.abs(vert) > Math.abs(hori)) {
             if (vert < 0) {
-                dir = "down"
+                dir = "down";
             } else {
-                dir = "up"
+                dir = "up";
             }
         } else {
             if (hori < 0) {
-                dir = "right"
+                dir = "right";
             } else {
-                dir = "left"
+                dir = "left";
             }
         }
         handleGesture(dir);
@@ -194,52 +193,52 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleGesture(dir) {
         switch(dir) {
             case "up":
-                keyUp()
+                keyUp();
                 console.log('Swiped Up');
                 break;
             case "down":
-                keyDown()
+                keyDown();
                 console.log('Swiped Down');
                 break;
             case "right":
-                keyRight()
+                keyRight();
                 console.log('Swiped Right');
                 break;
             case "left":
-                keyLeft()
+                keyLeft();
                 console.log('Swiped Left');
                 break;
         }
         // Swipe Left function
         if (touchendX < touchstartX) {
-            moveLeft()
-            combineRow()
-            moveLeft()
-            generate()
+            moveLeft();
+            combineRow();
+            moveLeft();
+            generate();
             console.log('Swiped Left');
         }
         // Swipe Right function
         if (touchendX > touchstartX) {
-            moveRight()
-            combineRow()
-            moveRight()
-            generate()
+            moveRight();
+            combineRow();
+            moveRight();
+            generate();
             console.log('Swiped Right');
         }
         // Swipe Up function
         if (touchendY < touchstartY) {
-            moveUp()
-            combineColumn()
-            moveUp()
-            generate()
+            moveUp();
+            combineColumn();
+            moveUp();
+            generate();
             console.log('Swiped Up');
         }
         // Swipe Down function
         if (touchendY > touchstartY) {
-            moveDown()
-            combineColumn()
-            moveDown()
-            generate()
+            moveDown();
+            combineColumn();
+            moveDown();
+            generate();
             console.log('Swiped Down');
         }
     
@@ -262,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log("Swipe not big enough"); // REMOVE THIS ELSE SECTION LATER
     }
-    document.addEventListener('keyup', control)
+    document.addEventListener('keyup', control);
     // Move Right Function
     function keyRight() {
         var validMove = false;
@@ -270,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validMove = combineRow(validMove);
         validMove = moveRight(validMove);
         if (validMove) {
-            generate()
+            generate();
         } else {
             // ILLEGAL MOVE
         }
@@ -282,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validMove = combineRow(validMove);
         validMove = moveLeft(validMove);
         if (validMove) {
-            generate()
+            generate();
         } else {
             // ILLEGAL MOVE
         }
@@ -294,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validMove = combineRow(validMove);
         validMove = moveDown(validMove);
         if (validMove) {
-            generate()
+            generate();
         } else {
             // ILLEGAL MOVE
         }
@@ -306,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validMove = combineRow(validMove);
         validMove = moveUp(validMove);
         if (validMove) {
-            generate()
+            generate();
         } else {
             // ILLEGAL MOVE
         }
@@ -315,22 +314,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkForWin() {
         for (let i = 0; i < tiles.length; i++) {
             if (tiles[i].innerHTML == 2048) {
-                resultDisplay.innerHTML = 'Congratulations, You Win!'
-                document.removeEventListener('keyup', control)
+                resultDisplay.innerHTML = 'Congratulations, You Win!';
+                document.removeEventListener('keyup', control);
             }
         }
     }
     // Check For No Possible Moves
     function checkForGameOver() {
-        let blank = 0
+        let blank = 0;
         for (let i = 0; i < tiles.length; i++) {
             if (tiles[i].innerHTML == 0) {
-                blank++
+                blank++;
             }
         }
         if (blank === 0) {
-            resultDisplay.innerHTML = 'You Lose!'
-            document.removeEventListener('keyup', control)
+            resultDisplay.innerHTML = 'You Lose!';
+            document.removeEventListener('keyup', control);
         }
     }
-})
+});
