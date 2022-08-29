@@ -148,11 +148,46 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('touchend', function (event) {
         touchendX = event.changedTouches[0].screenX;
         touchendY = event.changedTouches[0].screenY;
-        handleGesture();
+        var hori = touchstartX - touchendX;
+        var vert = touchstartY - touchendY;
+        var dir = String;
+        console.log(Math.abs(hori) + " / " + Math.abs(vert)); // REMOVE
+        if (Math.abs(vert) > Math.abs(hori)) {
+            if (vert < 0) {
+                dir = "down"
+            } else {
+                dir = "up"
+            }
+        } else {
+            if (hori < 0) {
+                dir = "right"
+            } else {
+                dir = "left"
+            }
+        }
+        handleGesture(dir);
     }, false);
     
     // Swipe Gestures for left, right, up & down
-    function handleGesture() {
+    function handleGesture(dir) {
+        switch(dir) {
+            case "up":
+                keyUp()
+                console.log('Swiped Up');
+                break;
+            case "down":
+                keyDown()
+                console.log('Swiped Down');
+                break;
+            case "right":
+                keyRight()
+                console.log('Swiped Right');
+                break;
+            case "left":
+                keyLeft()
+                console.log('Swiped Left');
+                break;
+        }
         // Swipe Left function
         if (touchendX < touchstartX) {
             moveLeft()
