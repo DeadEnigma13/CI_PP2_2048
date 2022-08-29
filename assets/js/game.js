@@ -222,6 +222,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
     }
+    if ((Math.abs(vert) > 200) || (Math.abs(hori) > 200)) {
+        if (Math.abs(vert) > Math.abs(hori)) {
+            if (vert < 0) {
+                dir = "down";
+            } else {
+                dir = "up";
+            }
+        } else {
+            if (hori < 0) {
+                dir = "right";
+            } else {
+                dir = "left";
+            }
+        }
+        handleGesture(dir);
+    } else {
+        console.log("Swipe not big enough"); // REMOVE THIS ELSE SECTION LATER
+    }
     document.addEventListener('keyup', control)
     // Move Right Function
     function keyRight() {
