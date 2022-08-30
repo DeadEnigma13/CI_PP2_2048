@@ -373,13 +373,18 @@ hr {
     .rules {
         text-align: center;
         margin: auto;
-        font-size: 16px;
+        font-size: 20px;
         display: table;
         color: black;
         font-weight: 600;
-        padding: 0px 4px;
+        padding: 9px 15px;
     }
     /** Score Container **/
+    .score-container {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-bottom: 85px;
+    }
     .score-container h1 {
         border-radius: 10px;
         background-color: rgb(252,185,134, 0.5);
@@ -431,6 +436,8 @@ hr {
         transform: translate(-50%, -45%);
         display: flex;
         align-items: center;
+        margin-top: 15px;
+        padding-left: 45px;
     }
 }
 /** 768px Screen Size **/
@@ -491,7 +498,7 @@ hr {
     .score-container {
         display: flex;
         flex-direction: row-reverse;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
     }
     /** Grid **/
     .grid {
