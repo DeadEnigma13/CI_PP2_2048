@@ -60,6 +60,10 @@ button {
 hr {
     display: none;
 }
+.demo {
+    visibility: visible;
+    color: white;
+}
 /** Game Rules **/
 .popup {
     position: relative;
@@ -70,7 +74,6 @@ hr {
     -ms-user-select: none;
     user-select: none;
 }
-
 /* The actual popup */
 .popup .popuptext {
     visibility: hidden;
@@ -86,7 +89,6 @@ hr {
     left: 50%;
     margin-left: -80px;
 }
-
 /* Popup arrow */
 .rules .rulestext::after {
     content: "";
@@ -97,8 +99,18 @@ hr {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
+    display: none;
 }
+.rules {
+    text-align: center;
+    margin: auto;
+    font-size: 17px;
+    display: table;
+    color: black;
+    font-weight: 600;
 
+    padding: 5px 5px;
+}
 /* Toggle this class - hide and show the popup */
 .rules .show {
     visibility: visible;

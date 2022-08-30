@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById("myRules").innerHTML= "Welcome " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require.";
 function myFunction(player) {
 document.getElementById("myRules").innerHTML =
-    "Welcome " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require.";
+    "Welcome " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require. ";
     var rules = document.getElementById("myRules");
     rules.classList.toggle("show");
 }
