@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function keyDown() {
         var validMove = false;
         validMove = moveDown(validMove);
-        validMove = combineRow(validMove);
+        validMove = combineColumn(validMove);
         validMove = moveDown(validMove);
         if (validMove) {
             generate();
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function keyUp() {
         var validMove = false;
         validMove = moveUp(validMove);
-        validMove = combineRow(validMove);
+        validMove = combineColumn(validMove);
         validMove = moveUp(validMove);
         if (validMove) {
             generate();
