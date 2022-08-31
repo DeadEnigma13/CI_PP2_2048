@@ -314,10 +314,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 // When the user clicks on div, open the popup
-document.getElementById("myRules").innerHTML= "Welcome " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require.";
+document.getElementById("myRules").innerHTML= "Hello " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require.";
 function myFunction(player) {
 document.getElementById("myRules").innerHTML =
-    "Welcome " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require. ";
+    "Hello " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require. ";
     var rules = document.getElementById("myRules");
     rules.classList.toggle("show");
 }
