@@ -707,7 +707,7 @@ hr {
         color: black;
         font-style: italic;
         font-weight: 600;
-        padding: 10px;
+        padding: 0px;
     }
     p span {
         font-size: 20px;
@@ -752,7 +752,7 @@ hr {
     .score-container h2 {
         border-radius: 10px;
         background-color: rgba(250, 114, 114, 0.5);
-        padding: 25px 30px;
+        padding: 20px 20px;
         margin: auto;
     }
     .score-container {
@@ -768,8 +768,8 @@ hr {
     .grid {
         display: flex;
         flex-wrap: wrap;
-        width: 600px;
-        height: 525px;
+        width: 575px;
+        height: 475px;
         background-color: gainsboro;
         gap: 10px;
         justify-content: center;
@@ -780,8 +780,8 @@ hr {
         position: relative;
     }
     .grid div {
-        width: 130px;
-        height: 120px;
+        width: 125px;
+        height: 105px;
         background-color: #bcc6d3;
         border-radius: 10px;
         display: flex;
