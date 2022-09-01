@@ -36,3 +36,28 @@
 9. [Deployment](#deployment)
 10. [Credits](#credits)
 11. [Acknowledgements](#acknowledgements)
+
+## Project Goals
+
+### User Goals
+- Be able to understand the rules of the game and how to play
+- Understand when the game has been won or lost
+- Be able to restart the game easily without refreshing the website
+
+### Site Owner Goals
+- Deliver rules and information of the game
+- Provide an easy but fun game
+- Let users email to inform about potential bugs or improvements to the game
+## User Experience
+
+### Target Audience
+- All ages of people
+- Anyone who is looking for fun new game to play on the go or at home
+
+### User Requirements and Expectations
+- Allow users to indentify rules easily
+- Quick easy way for users to contact the game owner
+- Accessibility
+- All provided information is easily readable on all screen sizes
+
+### User Stories
