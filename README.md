@@ -61,3 +61,18 @@
 - All provided information is easily readable on all screen sizes
 
 ### User Stories
+
+#### First-time User
+1. As a first-time user, I want to have an easy way of accessing the rules.
+2. As a first-time user, I want to be able to restart the game without refreshing the website.
+3. As a first-time user, I want to know if I have won or lost the game.
+
+#### Returning User
+4. As a returning user, I want to easily contact the game owner in case of any issues.
+5. As a returning user, I want to find social media links to the site owners previous work.
+
+#### Site Owner
+6. As the site owner, I want users to contact about issues and bugs.
+7. As the site owner, I want users to find all relative information easily.
+
+
