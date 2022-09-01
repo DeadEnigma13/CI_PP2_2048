@@ -66,13 +66,22 @@
 1. As a first-time user, I want to have an easy way of accessing the rules.
 2. As a first-time user, I want to be able to restart the game without refreshing the website.
 3. As a first-time user, I want to know if I have won or lost the game.
-
 #### Returning User
 4. As a returning user, I want to easily contact the game owner in case of any issues.
 5. As a returning user, I want to find social media links to the site owners previous work.
-
 #### Site Owner
 6. As the site owner, I want users to contact about issues and bugs.
 7. As the site owner, I want users to find all relative information easily.
+## Design
+
+### Design Choices
+The webiste has been designed with accessibility in mind. Users with poor vision and for those who are colour blinded can still view and play the game without struggling to see the numbers on screen.
+
+### Colour
+The colours picked with accessibility for poor sighted users in mind, all colours picked are light with the text being mostly black so it stands out for all users.
+![Colour Scheme](docs/features/colour-picker.png)
+
+### Font
+Lato with sans serif as a fallback was used for headers and paragraphs on the page as the font complimented the colours well.
 
 
