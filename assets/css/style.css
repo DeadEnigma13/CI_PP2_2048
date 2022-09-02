@@ -828,19 +828,19 @@ hr {
 /** 1200px Screen Size **/
 @media screen and (min-width: 1200px) {
     p {
-        font-size: 20px;
+        font-size: 15px;
         color: black;
         font-style: italic;
         font-weight: 600;
         padding: 0px;
     }
     p span {
-        font-size: 20px;
+        font-size: 15px;
         color: white;
         font-weight: bold;
     }
     h1, h2 {
-        font-size: 40px;
+        font-size: 33px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -852,7 +852,7 @@ hr {
         text-decoration: none;
         cursor: pointer;
         float: right;
-        font-size: 35px;
+        font-size: 25px;
         background-color: rgb(151, 149, 147, 0.75);
         border-style: none;
     }
@@ -860,7 +860,7 @@ hr {
     .rules {
         text-align: center;
         margin: auto;
-        font-size: 20px;
+        font-size: 15px;
         display: table;
         color: black;
         font-weight: 600;
@@ -871,13 +871,13 @@ hr {
         display: block; 
         border-radius: 10px;
         background-color: rgb(252,185,134, 0.5);
-        padding: 60px 60px;
+        padding: 25px 50px;
         margin-right: 20%;
     }
     .score-container h2 {
         border-radius: 10px;
         background-color: rgba(250, 114, 114, 0.5);
-        padding: 20px 20px;
+        padding: 5px 0px;
         margin: auto;
     }
     .score-container {
@@ -894,7 +894,7 @@ hr {
         display: flex;
         flex-wrap: wrap;
         width: 575px;
-        height: 475px;
+        height: 360px;
         background-color: gainsboro;
         gap: 10px;
         justify-content: center;
@@ -906,7 +906,7 @@ hr {
     }
     .grid div {
         width: 125px;
-        height: 105px;
+        height: 75px;
         background-color: #bcc6d3;
         border-radius: 10px;
         display: flex;
@@ -914,14 +914,14 @@ hr {
         align-items: center;
         text-align: center;
         margin: auto;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 600;
         animation: show 200ms ease-in-out;
         transition: 100ms ease-in-out;
     }
     /** Result **/
     #result {
-        font-size: 25px;
+        font-size: 15px;
         font-weight: bold;
         display: flex;
         justify-content: center;
@@ -936,20 +936,20 @@ hr {
         position: fixed;
         width: 80%;
         max-width: 50rem;
-        top: 90%;
+        top: 91%;
         left: 50%;
         transform: translate(-50%, -45%);
         display: flex;
         align-items: center;
-        padding-left: 180px;
+        padding-left: 225px;
     }
     #footer-container i {
-        font-size: 40px;
+        font-size: 30px;
         color: white;
         padding: 3px;
     }
     .float-left p {
-        font-size: 25px;
+        font-size: 20px;
     }
     /** Contact Form **/
     #form #contact-form {
