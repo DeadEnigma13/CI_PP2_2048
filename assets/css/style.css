@@ -349,6 +349,7 @@ hr {
         align-items: center;
         margin-top: 35px;
     }
+    /** Contact Form **/
     #form-container {
         padding: 5%;
         margin-top: 25%;
@@ -935,7 +936,7 @@ hr {
         position: fixed;
         width: 80%;
         max-width: 50rem;
-        top: 95%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -45%);
         display: flex;
