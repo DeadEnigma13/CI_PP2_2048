@@ -513,19 +513,19 @@ hr {
 /** 768px Screen Size **/
 @media screen and (min-width: 768px) {
     p {
-        font-size: 20px;
+        font-size: 15px;
         color: black;
         font-style: italic;
         font-weight: 600;
         padding: 10px;
     }
     p span {
-        font-size: 20px;
+        font-size: 15px;
         color: white;
         font-weight: bold;
     }
     h1, h2 {
-        font-size: 35px;
+        font-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -537,7 +537,7 @@ hr {
         text-decoration: none;
         cursor: pointer;
         float: right;
-        font-size: 35px;
+        font-size: 30px;
         background-color: rgb(151, 149, 147, 0.75);
         border-style: none;
     }
@@ -545,7 +545,7 @@ hr {
     .rules {
         text-align: center;
         margin: auto;
-        font-size: 20px;
+        font-size: 15px;
         display: table;
         color: black;
         font-weight: 600;
@@ -556,13 +556,13 @@ hr {
         display: block; 
         border-radius: 10px;
         background-color: rgb(252,185,134, 0.5);
-        padding: 50px 50px;
+        padding: 30px 20px;
         margin: auto;
     }
     .score-container h2 {
         border-radius: 10px;
         background-color: rgba(250, 114, 114, 0.5);
-        padding: 25px 30px;
+        padding: 10px 30px;
         margin: auto;
     }
     .score-container {
@@ -574,10 +574,10 @@ hr {
     .grid {
         display: flex;
         flex-wrap: wrap;
-        width: 600px;
-        height: 525px;
+        width: 550px;
+        height: 360px;
         background-color: gainsboro;
-        gap: 10px;
+        gap: 5px;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
@@ -586,8 +586,8 @@ hr {
         position: relative;
     }
     .grid div {
-        width: 130px;
-        height: 120px;
+        width: 120px;
+        height: 85px;
         background-color: #bcc6d3;
         border-radius: 10px;
         display: flex;
@@ -595,14 +595,14 @@ hr {
         align-items: center;
         text-align: center;
         margin: auto;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 600;
         animation: show 200ms ease-in-out;
         transition: 100ms ease-in-out;
     }
     /** Result **/
     #result {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
         display: flex;
         justify-content: center;
@@ -617,7 +617,7 @@ hr {
         position: fixed;
         width: 80%;
         max-width: 50rem;
-        top: 95%;
+        top: 93%;
         left: 50%;
         transform: translate(-50%, -45%);
         display: flex;
@@ -625,12 +625,12 @@ hr {
         padding-left: 100px;
     }
     #footer-container i {
-        font-size: 40px;
+        font-size: 25px;
         color: white;
         padding: 3px;
     }
     .float-left p {
-        font-size: 25px;
+        font-size: 20px;
     }
     /** Contact Form **/
     #form #contact-form {
