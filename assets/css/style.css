@@ -339,15 +339,15 @@ hr {
     }
     /** Footer **/
     #footer-container {
-        position: relative;
+        position: fixed;
         width: 80%;
         max-width: 50rem;
-        top: 95%;
+        top: 89%;
         left: 50%;
         transform: translate(-50%, -45%);
         display: flex;
         align-items: center;
-        margin-top: 35px;
+        margin-top: 30px;
     }
     /** Contact Form **/
     #form-container {
