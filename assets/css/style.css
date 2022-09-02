@@ -631,6 +631,71 @@ hr {
     .float-left p {
         font-size: 25px;
     }
+    /** Contact Form **/
+    #form #contact-form {
+        height: 500px;
+        margin: 5%;
+    }
+    #form-container {
+        padding: 5%;
+        margin-top: 25%;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-sizing: border-box;
+        border: 5px solid #101010;
+        background-color: powderblue;
+        border-radius: 10px;
+    }
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-form input {
+        border-radius: 5px;
+        border: 2px solid #101010;
+        font-size: 25px;
+    }
+    #contact-form textarea {
+        border-radius: 5px;
+        border: 2px solid #101010;
+        font-size: 25px;
+        height: 200px;
+    }
+    #contact-form label {
+        font-size: 30px;
+        color: #101010;
+        font-weight: bold;
+    }
+    #contact-form .btn-send-form {
+        font-size: 30px;
+        color: #101010;
+        background-color: #bcc6d3;
+        cursor: pointer;
+        width: 30%;
+        margin-top: 15px;
+    }
+    #contact-form .btn-send-form:hover {
+        color: white;
+        background-color: #101010;
+    }
+    #contact-form a {
+        text-decoration: none;
+        color: #101010;
+        border: 2px solid #101010;
+        background-color: #bcc6d3;
+        width: 29.4%;
+        border-radius: 5px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    #contact-form a:hover {
+        color: white;
+        background-color: #101010;
+    }
 }
 /** 920px Screen Size **/
 @media screen and (min-width: 920px) {
@@ -757,7 +822,7 @@ hr {
     }
     .float-left p {
         font-size: 25px;
-    }
+    }    
 }
 /** 1200px Screen Size **/
 @media screen and (min-width: 1200px) {
