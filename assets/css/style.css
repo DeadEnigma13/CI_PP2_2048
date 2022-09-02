@@ -349,6 +349,65 @@ hr {
         align-items: center;
         margin-top: 35px;
     }
+    #form-container {
+        padding: 5%;
+        margin-top: 25%;
+        margin-left: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+        border: 5px solid #101010;
+        background-color: powderblue;
+        border-radius: 10px;
+    }
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-form input {
+        border-radius: 5px;
+        border: 2px solid #101010;
+        font-size: 15px;
+    } 
+    #contact-form textarea {
+        border-radius: 5px;
+        border: 2px solid #101010;
+        font-size: 15px;
+    }
+    #contact-form label {
+        font-size: 25px;
+        color: #101010;
+        font-weight: bold;
+    }
+    #contact-form .btn-send-form {
+        font-size: 20px;
+        color: #101010;
+        background-color: #bcc6d3;
+        cursor: pointer;
+        width: 25%;
+        margin-top: 5px;
+    }
+    #contact-form .btn-send-form:hover {
+        color: white;
+        background-color: #101010;
+    }
+    #contact-form a {
+        text-decoration: none;
+        color: #101010;
+        border: 2px solid #101010;
+        background-color: #bcc6d3;
+        width: 24%;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    #contact-form a:hover {
+        color: white;
+        background-color: #101010;
+    }
 }
 /** 480px Screen Sizes **/
 @media screen and (min-width: 480px) {
