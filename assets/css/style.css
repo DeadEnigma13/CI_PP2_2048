@@ -413,19 +413,19 @@ hr {
 /** 480px Screen Sizes **/
 @media screen and (min-width: 480px) {
     p {
-        font-size: 18px;
+        font-size: 13px;
         color: black;
         font-style: italic;
         font-weight: 600;
         padding: 1px;
     }
     p span {
-        font-size: 18px;
+        font-size: 13px;
         color: white;
         font-weight: bold;
     }
     h1, h2 {
-        font-size: 30px;
+        font-size: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -438,7 +438,7 @@ hr {
     .rules {
         text-align: center;
         margin: auto;
-        font-size: 20px;
+        font-size: 13px;
         display: table;
         color: black;
         font-weight: 600;
@@ -448,12 +448,12 @@ hr {
     .score-container {
         display: flex;
         flex-direction: row-reverse;
-        padding-bottom: 85px;
+        padding-bottom: 0px;
     }
     .score-container h1 {
         border-radius: 10px;
         background-color: rgb(252,185,134, 0.5);
-        padding: 15px 0px;
+        padding: 25px 25px;
         margin: auto;
     }
     /** Grid **/
@@ -461,7 +461,7 @@ hr {
         display: flex;
         flex-wrap: wrap;
         width: 380px;
-        height: 400px;
+        height: 360px;
         background-color: gainsboro;
         gap: 5px;
         justify-content: center;
@@ -473,7 +473,7 @@ hr {
     }
     .grid div {
         width: 80px;
-        height: 90px;
+        height: 80px;
         background-color: #bcc6d3;
         border-radius: 10px;
         display: flex;
@@ -481,14 +481,14 @@ hr {
         align-items: center;
         text-align: center;
         margin: auto;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
         animation: show 200ms ease-in-out;
         transition: 100ms ease-in-out;
     }
     /** Result **/
     #result {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bold;
         display: flex;
         justify-content: center;
@@ -501,7 +501,7 @@ hr {
         position: fixed;
         width: 80%;
         max-width: 50rem;
-        top: 95%;
+        top: 92%;
         left: 50%;
         transform: translate(-50%, -45%);
         display: flex;
