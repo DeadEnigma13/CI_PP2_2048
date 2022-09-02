@@ -81,7 +81,33 @@ The webiste has been designed with accessibility in mind. Users with poor vision
 The colours picked with accessibility for poor sighted users in mind, all colours picked are light with the text being mostly black so it stands out for all users.
 ![Colour Scheme](docs/features/colour-picker.png)
 
-### Font
+### Fonts
 Lato with sans serif as a fallback was used for headers and paragraphs on the page as the font complimented the colours well.
+
+### Structure
+The page is structured in a user friendly, easy to learn way so users who arrive on the site know exactly how to play the game and what buttons to press on both mobile and desktop.
+The website contains only 2 pages:
+- The main page in which the users play the game.
+- Contact Us page with an email API.
+
+### Wireframes
+
+
+## Technologies Used
+
+### Languages
+- HTML
+- CSS
+- JavaScript
+
+### Frameworks & Tools
+- Git
+- GitHub
+- Gitpod
+- Balsamiq
+- Google Fonts
+- Adobe Color
+- Font Awesome
+- Favicon<span>.</span>io
 
 
