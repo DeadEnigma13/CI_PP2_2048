@@ -159,9 +159,16 @@ The webpage consists of 2 pages and 7 features
 ## Validation
 The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors and only 1 error.
 <details><summary>2048</summary>
-<img src="docs/features/validation/2048-validation.png">
+<img src="docs/validation/2048-validation.png">
 </details>
 <details><summary>Contact</summary>
-<img src="docs/features/validation/contact-validation.png"></details>
+<img src="docs/validation/contact-validation.png">
+</details>
+
+### CSS Validation
+The W3C Jigsaw CSS Validation Service was used to validate the CSS style of the website. When validating just my own custom CSS it passes with no errors and no warnings.
+<details><summary>style.css</summary>
+<img src="docs/validation/2048-css-validation.png">
+</details>
 
 
