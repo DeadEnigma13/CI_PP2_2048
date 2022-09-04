@@ -178,4 +178,9 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS style of the 
 <img src="docs/validation/2048-css-validation.png">
 </details>
 
+### JavaScript Validation
+The JShint Validation Service was used to validate the JavaScript of the website. When validating it passes with no errors but 64 warnings which ES6/Mozilla JS extension warnings.
+<details><summary>game.js</summary>
+<img src="docs/validation/2048-js-validation.png">
+</details>
 
