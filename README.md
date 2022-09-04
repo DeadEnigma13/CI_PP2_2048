@@ -157,7 +157,11 @@ The webpage consists of 2 pages and 7 features
 ![Restart](docs/features/restart.jpg)
 
 ## Validation
-The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors.
-
+The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors and only 1 error.
+<details><summary>2048</summary>
+<img src="docs/features/validation/2048-validation.png">
+</details>
+<details><summary>Contact</summary>
+<img src="docs/features/validation/contact-validation.png"></details>
 
 
