@@ -172,18 +172,18 @@ document.addEventListener('DOMContentLoaded', () => {
         var hori = touchstartX - touchendX;
         var vert = touchstartY - touchendY;
         var dir = String;
-        console.log(Math.abs(hori) + " / " + Math.abs(vert)); // REMOVE
+        console.log(Math.abs(hori) + " / " + Math.abs(vert));
         if (Math.abs(vert) > Math.abs(hori)) {
             if (vert < 0) {
-                dir = "down"
+                dir = "down";
             } else {
-                dir = "up"
+                dir = "up";
             }
         } else {
             if (hori < 0) {
-                dir = "right"
+                dir = "right";
             } else {
-                dir = "left"
+                dir = "left";
             }
         }
         handleGesture(dir);

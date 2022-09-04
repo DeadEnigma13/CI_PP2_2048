@@ -118,42 +118,49 @@ The webpage consists of 2 pages and 7 features
 - The title and score can be seen at the top of the page
 - The score is updated when a new tile is connected or entered the game board
 - User stories covered: 6
+
 ![Title and Score](docs/features/title-score.png)
 
 ### Gameboard
 - Displays in the middle of the screen
 - Shows current numbers in play
 - User stories covered: 8
+
 ![Gameboard](docs/features/gameboard.png)
 
 ### Rules
 - Rules are shown with the i button displayed above the gameboard
 - Shown under the scoreboard
 - User stories covered: 1
+
 ![Rules](docs/features/rules.png)
 
 ### Footer
 - Shown at the bottom of every page
 - Includes links to social media pages and email api
 - User stories covered: 4, 5, 8
+
 ![Footer](docs/features/footer.png)
 
 ### Email enquiries
 - Displayed at the bottom of the screen in the footer
 - Sends user to a form screen, allows user to send enquiries about the game
 - User stories covered: 4, 7, 8
+
 ![Email](docs/features/email.jpg)
 
 ### Result
 - Result displays when the game decides if the user wins or loses
 - Result shows above the gameboard after the game has been decided
 - User stories covered: 3
+
 ![Result](docs/features/result.png)
 
 ### Restart
 - Restart icon allows users to restart the game easily without refreshing the page
 - Icon is displayed next to the rules icon below the score
 - User stories covered: 6
+
 ![Restart](docs/features/restart.jpg)
 
 ## Validation
