@@ -186,3 +186,14 @@ The JShint Validation Service was used to validate the JavaScript of the website
 <details><summary>contact.js</summary>
 <img src="docs/validation/2048-contact-validation.png">
 </details>
+
+### Accessibility
+
+### Performance
+
+### Performing tests on various devices
+The website was tested on the following devices
+- Lenovo ThinkPad Pro Laptop
+- Google Pixel 6 Pro
+- Oppo Find X5 Pro
+- Samsung Tablet
