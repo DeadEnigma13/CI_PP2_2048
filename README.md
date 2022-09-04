@@ -156,6 +156,8 @@ The webpage consists of 2 pages and 7 features
 - User stories covered: 6
 ![Restart](docs/features/restart.jpg)
 
+## Validation
+The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors.
 
 
 
