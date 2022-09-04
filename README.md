@@ -183,4 +183,6 @@ The JShint Validation Service was used to validate the JavaScript of the website
 <details><summary>game.js</summary>
 <img src="docs/validation/2048-js-validation.png">
 </details>
-
+<details><summary>contact.js</summary>
+<img src="docs/validation/2048-contact-validation.png">
+</details>
