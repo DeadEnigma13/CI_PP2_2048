@@ -69,7 +69,7 @@
 #### Returning User
 4. As a returning user, I want to easily contact the game owner in case of any issues.
 5. As a returning user, I want to find social media links to the site owners previous work.
-6. As a returning user, I want to know my current score 
+6. As a returning user, I want to know my current score.
 #### Site Owner
 7. As the site owner, I want users to contact about issues and bugs.
 8. As the site owner, I want users to find all relative information easily.
@@ -197,3 +197,94 @@ The website was tested on the following devices
 - Google Pixel 6 Pro
 - Oppo Find X5 Pro
 - Samsung Tablet
+
+In addition, the website was tested using the Google Chrome Developer Device Toggling option for all available device options.
+
+### Brower compatibility
+The website was tested on the following browsers.
+- Google Chrome
+- Duck Duck Go
+- Microsoft Edge
+
+### Testing user stories
+
+1. As a first-time user, I want to have an easy way of accessing the rules.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Information icon | Navigate to the i icon | Opens up the rules for the game | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/rules-user-story.png">
+</details>
+
+2. As a first-time user, I want to be able to restart the game without refreshing the website.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Restart icon | Navigate to the refresh icon | Restarts the game and score | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/restart-user-story.png">
+</details>
+
+3. As a first-time user, I want to know if I have won or lost the game.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game result | Play the game until win or loss | Depending on the game result, result shows outcome above the gameboard | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/result-user-story.png">
+</details>
+
+4. As a returning user, I want to easily contact the game owner in case of any issues.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Email | Locate the footer, click on the email icon | Takes user to the email form screen | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/email-user-story.png">
+</details>
+
+5. As a returning user, I want to find social media links to the site owners previous work.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Social Media Links | Locate the footer, click on the social media icons | Takes users to the site owners social media accounts | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/social-media-user-story.png">
+</details>
+
+6. As a returning user, I want to know my current score.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Score | Score is shown at the top of the screen | Shows users their current score | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/score-user-story.png">
+</details>
+
+7. As the site owner, I want users to contact about issues and bugs.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Email | Locate the footer, click on the email icon | Takes user to the email form screen | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/email-user-story.png">
+</details>
+
+8. As the site owner, I want users to find all relative information easily.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Relative Information | All relative information is easily visible on the screen | Users can find all information easily | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/ri-user-story.png">
+</details>
+
