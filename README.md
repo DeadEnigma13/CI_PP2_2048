@@ -103,14 +103,16 @@ The website contains only 2 pages:
 - JavaScript
 
 ### Frameworks & Tools
-- Git
-- GitHub
-- Gitpod
-- Balsamiq
-- Google Fonts
-- Adobe Color
-- Font Awesome
-- Favicon<span>.</span>io
+- [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up you can see at the start of this README.md file.
+- [Balsamiq](https://balsamiq.com/) to create the wireframes for the project
+- [EmailJS](https://www.emailjs.com) used to send email from the contact form
+- [Favicon.io](https://favicon.io) for making the site favicon
+- [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
+- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Google Fonts](https://fonts.google.com/)
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools) were used for debugging of the code and check site for responsiveness
+- [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [JShint](https://jshint.com/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/) were all used to validate the website
 
 ## Features
 The webpage consists of 2 pages and 7 features
