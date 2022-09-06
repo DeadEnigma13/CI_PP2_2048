@@ -73,6 +73,7 @@
 #### Site Owner
 7. As the site owner, I want users to contact about issues and bugs.
 8. As the site owner, I want users to find all relative information easily.
+9. As the site owner, I want users to find their way back to the game from the error 404 page.
 ## Design
 
 ### Design Choices
@@ -288,3 +289,12 @@ The website was tested on the following browsers.
 <img src="docs/user-stories-testing/ri-user-story.png">
 </details>
 
+9. As the site owner, I want users to find their way back to the game from the error 404 page.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Error 404 | Click on the return home button to navigate back to the game | Users return back to the main game | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-stories-testing/">
+</details>
