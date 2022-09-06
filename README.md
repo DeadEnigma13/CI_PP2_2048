@@ -298,3 +298,40 @@ The website was tested on the following browsers.
 <details><summary>Screenshot</summary>
 <img src="docs/user-stories-testing/">
 </details>
+
+## Bugs
+
+## Deployment 
+The website was deployed using GitHub Pages by following these steps:
+1. In the GitHub repository navigate to the Settings tab
+2. On the left hand menu select Pages
+3. For the source select Branch: master
+4. After the webpage refreshes automaticaly you will see a ribbon on the top saying: "Your site is live at https://deadenigma13.github.io/CI_PP1_TFDI/"
+
+You can for fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone.
+
+## Credits
+Images not referenced below are owned by the developer.
+
+### Media
+
+### Code
+In order of appearance:
+- 404 page was build using description on [GitHub Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+
+## Acknowledgements 
+I would like to take this opportunity to thank:
+- My mentor Mo Shami for his wonderful feedback, advice, guidance and support.
+- My partner Chloe for her support, free time away from the child and understanding.
+- Big shout out to Warwick Hart over in the Slack Community @Wozza_5P for the help and of course everyone else over in the Code Instiute slack community for their help, advice and support and providing peer reviews on my PP2 and peer code review.
