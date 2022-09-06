@@ -331,6 +331,7 @@ Images not referenced below are owned by the developer.
 ### Code
 In order of appearance:
 - 404 page was build using description on [GitHub Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+- Credit to <a href="https://stackoverflow.com/questions/62823062/adding-a-simple-left-right-swipe-gesture">StackOverflow</a> for the information on how to make left right swipe gestures on mobile devices.
 
 ## Acknowledgements 
 I would like to take this opportunity to thank:
