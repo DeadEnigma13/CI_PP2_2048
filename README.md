@@ -295,10 +295,10 @@ The website was tested on the following browsers.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Error 404 | Click on the return home button to navigate back to the game | Users return back to the main game | Works as expected |
+| Error 404 | Click on the go back button to navigate back to the game | Users return back to the main game | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user-stories-testing/">
+<img src="docs/user-stories-testing/error-404-user-story.png">
 </details>
 
 ## Bugs
