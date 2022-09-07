@@ -191,8 +191,30 @@ The JShint Validation Service was used to validate the JavaScript of the website
 </details>
 
 ### Accessibility
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
+
+<details><summary>2048</summary>
+<img src="docs/validation/2048-accessibility.png">
+</details>
+
+<details><summary>Contact</summary>
+<img src="docs/validation/contact-accessibility.png">
+</details>
+
+<details><summary>Error 404</summary>
+<img src="docs/validation/error-404-accessibility.png">
+</details>
 
 ### Performance
+Google lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+
+<details><summary>2048</summary>
+<img src="docs/validation/2048-lighthouse.png">
+</details>
+
+<details><summary>Contact</summary>
+<img src="docs/validation/contact-lighthouse.png">
+</details>
 
 ### Performing tests on various devices
 The website was tested on the following devices
