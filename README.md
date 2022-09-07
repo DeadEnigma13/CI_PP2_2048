@@ -327,6 +327,7 @@ You can clone the repository by following these steps:
 Images not referenced below are owned by the developer.
 
 ### Media
+Thanks to <a href="https://www.vectorstock.com/royalty-free-vector/game-over-glitch-vector-18841169">Vector Stock</a> for the error 404 image.
 
 ### Code
 In order of appearance:
