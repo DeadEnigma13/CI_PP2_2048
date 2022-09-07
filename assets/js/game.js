@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 4;
     let tiles = [];
     let score = 0;
-    // Game Tiles
+    /** Game Tiles */
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
             tile = document.createElement('div');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         generate();
     }
     createBoard ();
-    // Generate Random Number
+    /** Generate Random Number */
     function generate() {
         let randomNumber = Math.floor(Math.random() * tiles.length);
         if (tiles[randomNumber].innerHTML == 0) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkForGameOver();
         } else generate();
     }
-    // Swipe Right
+    /** Swipe Right */
     function moveRight(validMove) {
         validMove = validMove;
         for (let i = 0; i < 16; i++) {
@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 tiles[i+3].innerHTML = newRow[3];
            }
         }
-        return validMove; // Make sure we return if a valid move has happened or not
+        return validMove; /** Make sure we return if a valid move has happened or not */
     }
-    // Swipe Left
+    /** Swipe Left */
     function moveLeft(validMove) {
         validMove = validMove;
         for (let i = 0; i < 16; i++) {
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 tiles[i+3].innerHTML = newRow[3];
             }
         }
-        return validMove; // Make sure we return if a valid move has happened or not
+        return validMove; /** Make sure we return if a valid move has happened or not */ 
     }
-    // Swipe Down
+    /** Swipe Down */
     function moveDown(validMove) {
         validMove = validMove;
         for (let i = 0; i < 4; i++) {
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tiles[i+(width*2)].innerHTML = newColumn[2];
             tiles[i+(width*3)].innerHTML = newColumn[3];
         }
-        return validMove; // Make sure we return if a valid move has happened or not
+        return validMove; /** Make sure we return if a valid move has happened or not */
     }  
-    // Swipe Up
+    /** Swipe Up */
     function moveUp(validMove) {
         validMove = validMove;
         for (let i = 0; i < 4; i++) {
@@ -119,9 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tiles[i+(width*2)].innerHTML = newColumn[2];
             tiles[i+(width*3)].innerHTML = newColumn[3];
         }
-        return validMove; // Make sure we return if a valid move has happened or not
+        return validMove; /** Make sure we return if a valid move has happened or not */
     }
-    // Combine Numbers along row if numbers match
+    /** Combine Numbers along row if numbers match */
     function combineRow(validMove) {
         for (let i = 0; i < 15; i++) {
             if (tiles[i].innerHTML === tiles[i+1].innerHTML) {
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkForWin();
         return validMove;
     }
-    // Combine Numbers along column if numbers match
+    /** Combine Numbers along column if numbers match */
     function combineColumn(validMove) {
         for (let i = 0; i < 12; i++) {
             if (tiles[i].innerHTML === tiles[i+width].innerHTML) {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkForWin();
         return validMove;
     }
-    // Assign Keys for keyboard use
+    /** Assign Keys for keyboard use */
     function control(e) {
         if(e.key === 'ArrowRight') {
             keyRight();
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             keyDown();
         } 
     }
-    // Assign Keys for swiping mobile use
+    /** Assign Keys for swiping mobile use */
     document.addEventListener('touchstart', function (event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         handleGesture(dir);
     }, false);
-    // Swipe Gestures for left, right, up & down
+    /** Swipe Gestures for left, right, up & down */
     function handleGesture(dir) {
         switch(dir) {
             case "up":
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Swiped Left');
                 break;
         }
-        // Swipe Left function
+        /** Swipe Left function */
         if (touchendX < touchstartX) {
             moveLeft();
             combineRow();
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generate();
             console.log('Swiped Left');
         }
-        // Swipe Right function
+        /** Swipe Right function */
         if (touchendX > touchstartX) {
             moveRight();
             combineRow();
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generate();
             console.log('Swiped Right');
         }
-        // Swipe Up function
+        /** Swipe Up function */
         if (touchendY < touchstartY) {
             moveUp();
             combineColumn();
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generate();
             console.log('Swiped Up');
         }
-        // Swipe Down function
+        /** Swipe Down function */
         if (touchendY > touchstartY) {
             moveDown();
             combineColumn();
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     document.addEventListener('keyup', control);
-    // Move Right Function
+    /** Move Right Function */
     function keyRight() {
         var validMove = false;
         validMove = moveRight(validMove);
@@ -251,10 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (validMove) {
             generate();
         } else {
-            // ILLEGAL MOVE
+            /** ILLEGAL MOVE */
         }
     }
-    // Move Left Function
+    /** Move Left Function */
     function keyLeft() {
         var validMove = false;
         validMove = moveLeft(validMove);
@@ -263,10 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (validMove) {
             generate();
         } else {
-            // ILLEGAL MOVE
+            /** ILLEGAL MOVE */
         }
     }
-    // Move Down Function
+    /** Move Down Function */
     function keyDown() {
         var validMove = false;
         validMove = moveDown(validMove);
@@ -275,10 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (validMove) {
             generate();
         } else {
-            // ILLEGAL MOVE
+            /** ILLEGAL MOVE */
         }
     }
-    // Move Up Function
+    /** Move Up Function */
     function keyUp() {
         var validMove = false;
         validMove = moveUp(validMove);
@@ -287,10 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (validMove) {
             generate();
         } else {
-            // ILLEGAL MOVE
+            /** ILLEGAL MOVE */
         }
     }
-    // Check For Number 2048 For Win
+    /** Check For Number 2048 For Win */
     function checkForWin() {
         for (let i = 0; i < tiles.length; i++) {
             if (tiles[i].innerHTML == 2048) {
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    // Check For No Possible Moves
+    /** Check For No Possible Moves */
     function checkForGameOver() {
         let blank = 0;
         for (let i = 0; i < tiles.length; i++) {
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-// When the user clicks on div, open the popup
+/** When the user clicks on div, open the popup */
 document.getElementById("myRules").innerHTML= "Hello " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require.";
 function myFunction(player) {
 document.getElementById("myRules").innerHTML =
