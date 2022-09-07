@@ -242,6 +242,47 @@ hr {
 #footer-container i:hover {
     color: rgb(250, 114, 114);
 }
+/** Error 404 **/
+.error-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error-404 h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 25%;
+    background-color: rgb(250, 114, 114,  0.75);
+}
+.error-404 img {
+    height: 50vm;
+    width: 50vm;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #bcc6d3;
+    color: black;
+    text-align: center;
+    width: 25%;
+    font-size: 25px;
+    font-weight: 600;
+}
+.button:hover {
+    background-color: black;
+    color: white;
+}
 @keyframes show {
     0% {
         opacity: .5;
