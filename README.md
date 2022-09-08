@@ -96,7 +96,15 @@ The website contains only 2 pages:
 The project templates and wireframes for The Feathered Duck Inn restaurant were designed using [Balsamiq](https://balsamiq.com/).
 
 <details><summary>2048</summary>
-<img src="">
+<img src="docs/wireframes/2048-wireframe.png">
+<img src="docs/wireframes/2048-tablet-wireframe.png">
+<img src="docs/wireframes/2048-mobile.png">
+</details>
+
+<details><summary>Contact</summary>
+<img src="docs/wireframes/contact-wireframe.png">
+<img src="docs/wireframes/contact-tablet-wireframe.png">
+<img src="docs/wireframes/contact-mobile-wireframe.png">
 </details>
 
 ## Technologies Used
