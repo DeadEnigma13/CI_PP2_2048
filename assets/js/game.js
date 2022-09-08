@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 4;
     let tiles = [];
     let score = 0;
+
+    
     /** Game Tiles */
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
@@ -17,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         generate();
     }
     createBoard ();
-    /** Generate Random Number */
+    /** Generate Random Number 
+     * After every swipe or key press, new number is randomly generated in the remaining blank tiles
+    */
     function generate() {
         let randomNumber = Math.floor(Math.random() * tiles.length);
         if (tiles[randomNumber].innerHTML == 0) {
@@ -25,7 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
             checkForGameOver();
         } else generate();
     }
-    /** Swipe Right */
+    /** Swipe Right all tiles with numbers to the furthest right possible tiles
+     * all tiles which match will be doubled
+     * validMove is checked after every swipe to see if the game can continue
+     */
     function moveRight(validMove) {
         validMove = validMove;
         for (let i = 0; i < 16; i++) {
@@ -50,7 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return validMove; /** Make sure we return if a valid move has happened or not */
     }
-    /** Swipe Left */
+    /** Swipe Left all tiles with numbers to the furthest left possible tiles
+     * all tiles which match will be doubled
+     * validMove is checked after every swipe to see if the game can continue
+     */
     function moveLeft(validMove) {
         validMove = validMove;
         for (let i = 0; i < 16; i++) {
@@ -75,7 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return validMove; /** Make sure we return if a valid move has happened or not */ 
     }
-    /** Swipe Down */
+    /** Swipe Down all tiles with numbers to the lowest possible tile
+     * all tiles which match will be doubled
+     * validMove is checked after every swipe to see if the game can continue
+     */
     function moveDown(validMove) {
         validMove = validMove;
         for (let i = 0; i < 4; i++) {
@@ -98,7 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return validMove; /** Make sure we return if a valid move has happened or not */
     }  
-    /** Swipe Up */
+    /** Swipe Up moves all tiles with numbers to the highest possible tile
+     * all tiles which match will be doubled
+     * validMove is checked after every swipe to see if the game can continue
+    */
     function moveUp(validMove) {
         validMove = validMove;
         for (let i = 0; i < 4; i++) {
@@ -121,7 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return validMove; /** Make sure we return if a valid move has happened or not */
     }
-    /** Combine Numbers along row if numbers match */
+    /** Combine Numbers along row if numbers match
+     * Combined numbers generate new total score
+     */
     function combineRow(validMove) {
         for (let i = 0; i < 15; i++) {
             if (tiles[i].innerHTML === tiles[i+1].innerHTML) {
@@ -135,7 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
         checkForWin();
         return validMove;
     }
-    /** Combine Numbers along column if numbers match */
+    /** Combine Numbers along column if numbers match
+     * Combined numbers generate new total score
+     */
     function combineColumn(validMove) {
         for (let i = 0; i < 12; i++) {
             if (tiles[i].innerHTML === tiles[i+width].innerHTML) {
@@ -149,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkForWin();
         return validMove;
     }
-    /** Assign Keys for keyboard use */
+    /** Assign Keys for up, down, left and right for game controls */
     function control(e) {
         if(e.key === 'ArrowRight') {
             keyRight();
@@ -161,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             keyDown();
         } 
     }
-    /** Assign Keys for swiping mobile use */
+    /** Assign Keys for swiping left, right, up and down for game controls on mobile */
     document.addEventListener('touchstart', function (event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
@@ -203,28 +223,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 keyLeft();
                 break;
         }
-        /** Swipe Left function */
+        /** Swipe Left function swipes all tiles to the left
+         * combining the tiles which have the same number
+        */
         if (touchendX < touchstartX) {
             moveLeft();
             combineRow();
             moveLeft();
             generate();
         }
-        /** Swipe Right function */
+        /** Swipe Right function swipes all tiles to the right
+         * combining the tiles which have the same number
+         */
         if (touchendX > touchstartX) {
             moveRight();
             combineRow();
             moveRight();
             generate();
         }
-        /** Swipe Up function */
+        /** Swipe Up function swipes all tiles up
+         * combining the tiles which have the same number
+         */
         if (touchendY < touchstartY) {
             moveUp();
             combineColumn();
             moveUp();
             generate();
         }
-        /** Swipe Down function */
+        /** Swipe Down function swipes all tiles down
+         * combining the tiles which have the same number
+         */
         if (touchendY > touchstartY) {
             moveDown();
             combineColumn();
@@ -233,7 +261,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     document.addEventListener('keyup', control);
-    /** Move Right Function */
+    /** Move Right Function moves all tiles to the right
+     * combining all tiles which have the same number
+    */
     function keyRight() {
         var validMove = false;
         validMove = moveRight(validMove);
@@ -245,7 +275,9 @@ document.addEventListener('DOMContentLoaded', () => {
             /** ILLEGAL MOVE */
         }
     }
-    /** Move Left Function */
+    /** Move Left Function moves all tiles to the left
+     * combining all tiles which have the same number
+     */
     function keyLeft() {
         var validMove = false;
         validMove = moveLeft(validMove);
@@ -257,7 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
             /** ILLEGAL MOVE */
         }
     }
-    /** Move Down Function */
+    /** Move Down Function moves all tiles down
+     * combining all tiles which have the same number
+     */
     function keyDown() {
         var validMove = false;
         validMove = moveDown(validMove);
@@ -269,7 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
             /** ILLEGAL MOVE */
         }
     }
-    /** Move Up Function */
+    /** Move Up Function moves all tiles up
+     * combining all tiles which have the same number
+     */
     function keyUp() {
         var validMove = false;
         validMove = moveUp(validMove);
@@ -281,7 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
             /** ILLEGAL MOVE */
         }
     }
-    /** Check For Number 2048 For Win */
+    /** Check For Number 2048 For Win 
+     * If number 2048 has been checked, congratulations result appears on screen
+    */
     function checkForWin() {
         for (let i = 0; i < tiles.length; i++) {
             if (tiles[i].innerHTML == 2048) {
@@ -290,7 +328,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    /** Check For No Possible Moves */
+    /** Check For No Possible Moves 
+     * If no more possible numbers are possible,
+     * you lost result appears on screen
+    */
     function checkForGameOver() {
         let blank = 0;
         for (let i = 0; i < tiles.length; i++) {
@@ -304,7 +345,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-/** When the user clicks on div, open the popup */
+/** When the user clicks on i icon
+ * rules appear on screen greeting the user and telling them how to play
+*/
 document.getElementById("myRules").innerHTML= "Hello " + player + " to play this game simply use the arrow keys left, right, up & down on your keyboard, those using mobile device, simply swipe in the direction you require.";
 function myFunction(player) {
 document.getElementById("myRules").innerHTML =
