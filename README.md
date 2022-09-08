@@ -382,4 +382,4 @@ In order of appearance:
 I would like to take this opportunity to thank:
 - My mentor Mo Shami for his wonderful feedback, advice, guidance and support.
 - My partner Chloe for her support, free time away from the child and understanding.
-- Big shout out to Warwick Hart over in the Slack Community @Wozza_5P for the help and of course everyone else over in the Code Instiute slack community for their help, advice and support and providing peer reviews on my PP2 and peer code review.
+- Big shout out to Warwick Hart (@Wozza_5P) over in the Slack Community for the help and of course everyone else over in the Code Instiute slack community for their help, advice and support and providing peer reviews on my PP2 and peer code review.
