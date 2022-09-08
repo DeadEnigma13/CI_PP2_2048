@@ -352,7 +352,7 @@ The website was deployed using GitHub Pages by following these steps:
 1. In the GitHub repository navigate to the Settings tab
 2. On the left hand menu select Pages
 3. For the source select Branch: master
-4. After the webpage refreshes automaticaly you will see a ribbon on the top saying: "Your site is live at https://deadenigma13.github.io/CI_PP1_TFDI/"
+4. After the webpage refreshes automaticaly you will see a ribbon on the top saying: "Your site is live at https://deadenigma13.github.io/CI_PP2_2048/"
 
 You can for fork the repository by following these steps:
 1. Go to the GitHub repository
