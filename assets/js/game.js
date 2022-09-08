@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var hori = touchstartX - touchendX;
         var vert = touchstartY - touchendY;
         var dir = String;
-        console.log(Math.abs(hori) + " / " + Math.abs(vert));
         if (Math.abs(vert) > Math.abs(hori)) {
             if (vert < 0) {
                 dir = "down";
@@ -193,19 +192,15 @@ document.addEventListener('DOMContentLoaded', () => {
         switch(dir) {
             case "up":
                 keyUp();
-                console.log('Swiped Up');
                 break;
             case "down":
                 keyDown();
-                console.log('Swiped Down');
                 break;
             case "right":
                 keyRight();
-                console.log('Swiped Right');
                 break;
             case "left":
                 keyLeft();
-                console.log('Swiped Left');
                 break;
         }
         /** Swipe Left function */
@@ -214,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
             combineRow();
             moveLeft();
             generate();
-            console.log('Swiped Left');
         }
         /** Swipe Right function */
         if (touchendX > touchstartX) {
@@ -222,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
             combineRow();
             moveRight();
             generate();
-            console.log('Swiped Right');
         }
         /** Swipe Up function */
         if (touchendY < touchstartY) {
@@ -230,7 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
             combineColumn();
             moveUp();
             generate();
-            console.log('Swiped Up');
         }
         /** Swipe Down function */
         if (touchendY > touchstartY) {
@@ -238,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
             combineColumn();
             moveDown();
             generate();
-            console.log('Swiped Down');
         }
     }
     document.addEventListener('keyup', control);
