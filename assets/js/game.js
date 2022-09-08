@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let tiles = [];
     let score = 0;
 
-    
+
     /** Game Tiles */
     function createBoard() {
         for (let i = 0; i < width*width; i++) {
@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /** Swipe Right all tiles with numbers to the furthest right possible tiles
      * all tiles which match will be doubled
      * validMove is checked after every swipe to see if the game can continue
+     * @param {string} validMove
+     * @returns {string} validMove
      */
     function moveRight(validMove) {
         validMove = validMove;
@@ -60,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /** Swipe Left all tiles with numbers to the furthest left possible tiles
      * all tiles which match will be doubled
      * validMove is checked after every swipe to see if the game can continue
+     * @param {string} validMove
+     * @returns {string} validMove
      */
     function moveLeft(validMove) {
         validMove = validMove;
@@ -88,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /** Swipe Down all tiles with numbers to the lowest possible tile
      * all tiles which match will be doubled
      * validMove is checked after every swipe to see if the game can continue
+     * @param {string} validMove
+     * @returns {string} validMove
      */
     function moveDown(validMove) {
         validMove = validMove;
@@ -114,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /** Swipe Up moves all tiles with numbers to the highest possible tile
      * all tiles which match will be doubled
      * validMove is checked after every swipe to see if the game can continue
+     * @param {string} validMove
+     * @returns {string} validMove
     */
     function moveUp(validMove) {
         validMove = validMove;
@@ -139,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     /** Combine Numbers along row if numbers match
      * Combined numbers generate new total score
+     * @param {string} validMove
+     * @returns {string} validMove
      */
     function combineRow(validMove) {
         for (let i = 0; i < 15; i++) {
@@ -155,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     /** Combine Numbers along column if numbers match
      * Combined numbers generate new total score
+     * @param {string} validMove
+     * @returns {string} validMove
      */
     function combineColumn(validMove) {
         for (let i = 0; i < 12; i++) {
@@ -169,7 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
         checkForWin();
         return validMove;
     }
-    /** Assign Keys for up, down, left and right for game controls */
+    /** Assign Keys for up, down, left and right for game controls 
+     * @param {string} e 
+    */
     function control(e) {
         if(e.key === 'ArrowRight') {
             keyRight();
@@ -181,7 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
             keyDown();
         } 
     }
-    /** Assign Keys for swiping left, right, up and down for game controls on mobile */
+    /** Assign Keys for swiping left, right, up and down for game controls on mobile 
+     * Event listener to stop users swiping diagonally causing the game board to move twice unneccassarily
+    */
     document.addEventListener('touchstart', function (event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
@@ -207,7 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         handleGesture(dir);
     }, false);
-    /** Swipe Gestures for left, right, up & down */
+    /** Swipe Gestures for left, right, up & down 
+     * @param {string} dir
+    */
     function handleGesture(dir) {
         switch(dir) {
             case "up":
