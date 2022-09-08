@@ -93,7 +93,11 @@ The website contains only 2 pages:
 - Contact Us page with an email API.
 
 ### Wireframes
+The project templates and wireframes for The Feathered Duck Inn restaurant were designed using [Balsamiq](https://balsamiq.com/).
 
+<details><summary>2048</summary>
+<img src="">
+</details>
 
 ## Technologies Used
 
