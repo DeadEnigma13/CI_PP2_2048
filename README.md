@@ -228,6 +228,9 @@ Google lighthouse in Google Chrome Developer Tools was used to test the performa
 <img src="docs/validation/contact-lighthouse.png">
 </details>
 
+<details><summary>Error 404</summary>
+<img src="docs/validation/404-lighthouse.png">
+</details>
 ### Performing tests on various devices
 The website was tested on the following devices
 - Lenovo ThinkPad Pro Laptop
