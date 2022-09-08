@@ -35,5 +35,5 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 function formSubmitted() {
     let message = `
     Thank you for submitting, your message has been sent`;
-    document.getElementsByClassName('score-container').innerHTML = message;
+    document.getElementsById('form-container').innerHTML = message;
 }

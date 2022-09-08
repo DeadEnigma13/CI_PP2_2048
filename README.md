@@ -337,6 +337,13 @@ The website was tested on the following browsers.
 
 ## Bugs
 
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| The game result tells users they have lost despite possible moves still being available | Add return validMove function |
+| Users could swipe in a diagonal direction and it the game would play a move | Add directional if statements for the game to check if user has moved diagonally and if so to not return a move |
+| Users could continue the game even after 2048 tile showed | Add a checkForWin function and applied to combineRow/Column section |
+| Score wouldn't display correctly when combining tiles | Added a scoreDisplay.innerHTML = score function and added to get elementbyId(score) |
+
 ## Deployment 
 The website was deployed using GitHub Pages by following these steps:
 1. In the GitHub repository navigate to the Settings tab
